@@ -1,0 +1,49 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', Monospace;
+}
+
+body {
+    max-width: 900px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0 auto;
+    background-color:black;
+    border: white solid 1.5px;
+}
+
+header {
+    background-color: silver;
+    font-weight: bolder;
+    color: black;
+    padding: 10px 0px 1px 37px;
+}
+
+#landingPic {
+    width: 200px;
+    height: auto;
+    margin: 10px 12px;
+    border-radius: 18px;
+    border: white solid 2px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.byu {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.byu:hover {
+    color: lightgreen;
+    font-weight: bold;
+} 
+
+footer{ 
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    background-color: silver;
+    color: black;
+    padding: 1em;
+}
