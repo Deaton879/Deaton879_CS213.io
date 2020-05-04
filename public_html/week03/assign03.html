@@ -1,21 +1,90 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" style="position: relative; min-height: 100%;">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dallas Eaton's Week 03 Assignment</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <title>Dallas Eaton's Home Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed%7cRoboto+Mono&display=swap" rel="stylesheet">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="../css/small.css">-->
     </head>
-    <body>
-        <header>
-            <!--Header Content Here-->
-            <h1 class="title_heading">This will be assignment #3</h1>
+    
+    <body style="width: -webkit-fill-available; font-family: 'Roboto Condensed', sans-serif; background-color:black;">
+    
+        <header style="background-color: silver; font-weight: bolder; color: black; padding: 10px 0px 1px 37px;">
+            
+            <img id="landingPic" src="../images/profilePic.jpg" alt="Mugshot of Dallas Eaton" style="float: left;
+              width: 100px; height: auto; margin: 10px 12px; border-radius: 18px; border: white solid 2px;">
+              
+            <h1 class="title_heading" style="font-family: 'Roboto Mono', Monospace; text-shadow: 1px 1px palegreen;">Welcome to my Home Page!</h1>
+            
         </header>
-        <main>
-            <!--Main Content Here-->
-            <p class="main_p"></p>
-        </main>      
-        <footer>
+        
+        <hr>
+        <blockquote cite="https://www.brainyquote.com/quotes/horace_mann_132471" 
+            style="font-family:'Trebuchet MS', Helvetica, sans-serif; color: white; text-align: right; display: inline-block;">
+            <i>"To pity distress is but human; to relieve it is godlike."</i>
+            <br><b>- Horace Mann</b>
+        </blockquote>
+        <main style="height: 24em; margin-top: 5em;">
+            <table style="color: white; width:100%;">
+                <tr style="font-family: 'Roboto Mono', Monospace; color: palegreen">
+                    <th><u>Course #</u></th>
+                    <th><u>Course Description</u></th>
+                    <th><u>Sec #</u></th>
+                    <th><u>Class Time</u></th>
+                    <th><u>Class Location</u></th>
+                </tr>
+                <tr>
+                    <td style="text-align: center; padding-top: 25px;">REL 225C</td>
+                    <td style="text-align: center; padding-top: 25px;">Foundations of the Restoration</td>
+                    <td style="text-align: center; padding-top: 25px;">68</td>
+                    <td style="text-align: center; padding-top: 25px;">-</td>
+                    <td style="text-align: center; padding-top: 25px;">Online</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; padding-top: 25px;">CS 246</td>
+                    <td style="text-align: center; padding-top: 25px;">Software Design and Development</td>
+                    <td style="text-align: center; padding-top: 25px;">5</td>
+                    <td style="text-align: center; padding-top: 25px;">-</td>
+                    <td style="text-align: center; padding-top: 25px;">Online</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; padding-top: 25px;">CS 213</td>
+                    <td style="text-align: center; padding-top: 25px;">Web Engineering I</td>
+                    <td style="text-align: center; padding-top: 25px;">4</td>
+                    <td style="text-align: center; padding-top: 25px;">-</td>
+                    <td style="text-align: center; padding-top: 25px;">Online</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; padding-top: 25px;">WDD 230</td>
+                    <td style="text-align: center; padding-top: 25px;">Web Frontend Development</td>
+                    <td style="text-align: center; padding-top: 25px;">4</td>
+                    <td style="text-align: center; padding-top: 25px;">-</td>
+                    <td style="text-align: center; padding-top: 25px;">Online</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; padding-top: 25px;">FAML 120</td>
+                    <td style="text-align: center; padding-top: 25px;">Parenting Skills</td>
+                    <td style="text-align: center; padding-top: 25px;">Starts:<br>06/08/2020</td>
+                    <td style="text-align: center; padding-top: 25px;">-</td>
+                    <td style="text-align: center; padding-top: 25px;">Online</td>
+                </tr>
+            </table> 
+        </main>  
+        <hr>  
+        <footer style="position: absolute; left: 0; bottom: 0; height: auto; width: -webkit-fill-available; font-size: large; 
+                      font-weight: 600; text-align: center; background-color: silver; color: black; padding: 1em; text-shadow: 1px 1px palegreen;">
+                      
+            © 2020 | Dallas Eaton | Michigan | Bachelor of Applied Technology | BYU-Idaho | 
+            <a class="home" href="../index.html" style="color: darkblue;"> CS 213 Assignments</a> 
+            <br>
+            Last Updated: 
+            <span id="todaysDate"></span>
+            <script src="../js/todaysDate.js"></script>
+            
         </footer>
+        
     </body>
 </html>

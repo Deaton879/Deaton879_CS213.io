@@ -4,32 +4,48 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dallas Eaton's Assignments</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed%7cRoboto+Mono&display=swap" rel="stylesheet">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">-->
         <meta name="description" content="Landing page for submitted assignments. By: Dallas Eaton For: CS213 Web Engineering, Spring 2020, BYU-Idaho">
     </head>
+
     <body>
+
         <header>
             <!--Header Content Here-->
-            <h1 class="title_heading">CS 213 Assignments</h1>
+            <h1 class="title_heading" style="text-align: center; font-family: 'Roboto Mono', monospace; font-weight: bolder;">CS 213 Assignments</h1>
         </header>
+
+        <hr style="width: 35%; background-color: lightseagreen; height: 4px; border: solid 1.5px black; border-radius: 20px;">
+
         <main>
             <!--Main Content Here-->
-            <ul style="text-align: center; list-style-position: inside;">
-                <li><a href="./week02/assign02.html">Week 02</a></li>
-                <li><a href="./week03/assign03.html">Week 03</a></li>
-                <li><a href="./week04/assign04.html">Week 04</a></li>
-                <li><a href="./week05/assign05.html">Week 05</a></li>
-                <li><a href="./week06/assign06.html">Week 06</a></li>
-                <li><a href="./week07/assign07.html">Week 07</a></li>
-                <li><a href="./week08/assign08.html">Week 08</a></li>
-                <li><a href="./week09/assign09.html">Week 09</a></li>
-                <li><a href="./week10/assign10.html">Week 10</a></li>
-                <li><a href="./week11/assign11.html">Week 11</a></li>
-                <li><a href="./week12/assign12.html">Week 12</a></li>
-                <li><a href="./week13/assign13.html">Week 13</a></li>
+            <ul style="text-align: center; list-style-position: inside; font-family: 'Roboto Condensed', sans-serif; list-style-type: none; 
+                    font-weight: 500; font-size: large; padding: 0; color:steelblue;">
+                <li style="padding-top: 15px;"><a href="./week02/assign02.html">Week 02</a></li>
+                <li style="padding-top: 15px;"><a href="./week03/assign03.html">Week 03</a></li>
+                <li style="padding-top: 15px;"><a href="./week04/assign04.html">Week 04</a></li>
+                <li style="padding-top: 15px;"><a href="./week05/assign05.html">Week 05</a></li>
+                <li style="padding-top: 15px;"><a href="./week06/assign06.html">Week 06</a></li>
+                <li style="padding-top: 15px;"><a href="./week07/assign07.html">Week 07</a></li>
+                <li style="padding-top: 15px;"><a href="./week08/assign08.html">Week 08</a></li>
+                <li style="padding-top: 15px;"><a href="./week09/assign09.html">Week 09</a></li>
+                <li style="padding-top: 15px;"><a href="./week10/assign10.html">Week 10</a></li>
+                <li style="padding-top: 15px;"><a href="./week11/assign11.html">Week 11</a></li>
+                <li style="padding-top: 15px;"><a href="./week12/assign12.html">Week 12</a></li>
+                <li style="padding-top: 15px;"><a href="./week13/assign13.html">Week 13</a></li>
               </ul>
         </main>
-        <footer>
+
+        <hr style="background-color: lightseagreen; width: 30%; height: 4px; border: solid 1.5px black; border-radius: 20px;">
+
+        <footer style="font-weight: 600; text-align: center; padding: 1em;">
+            © 2020 | Dallas Eaton | Michigan | Bachelor of Applied Technology | BYU-Idaho   
+            <br><br>
+            Last Updated: 
+            <span id="todaysDate"></span>
+            <script src="js/todaysDate.js"></script>
         </footer>
+
     </body>
 </html>
