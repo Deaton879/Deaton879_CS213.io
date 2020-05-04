@@ -58,5 +58,5 @@ jobs:
         password: ${{ secrets.PASSWORD}}
         port: ${{ secrets.PORT}}
         script: |
-          find /home/${{ secrets.USERNAME}} -type d -exec chmod 755 {} \;
-          find /home/${{ secrets.USERNAME}} -type f -exec chmod 755 {} \;
+          find /home/eat19002/ -type d -exec chmod 755 {} \;
+          find /home/eat19002/ -type f -exec chmod 755 {} \;
