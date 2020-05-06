@@ -1,0 +1,16 @@
+@media only screen and (min-width: 60em) {
+    
+    .title_heading {
+        font-size: xxx-large;
+    }
+
+    .body_container {
+        max-width: 970px;
+    }
+
+    .body_content {
+        max-width: 900px;
+    }
+
+
+}

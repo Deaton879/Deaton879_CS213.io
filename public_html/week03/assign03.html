@@ -4,87 +4,122 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dallas Eaton's Home Page</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed%7cRoboto+Mono&display=swap" rel="stylesheet">
-        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="../css/small.css">-->
+        
+        <title>Assign03 - Week 3 - Dallas Eaton</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed%7cRoboto+Mono:wght@0,400;0,700;,0,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="../css/small.css">
+        <link rel="stylesheet" href="../css/large.css">
+
+        <style>
+            .responsive {
+                width: 100%;
+                height: auto;              
+            }
+
+            .course_box {
+                overflow-x:scroll;
+                background-color:white;
+                opacity: 0.6;
+            }
+
+            .banner {
+                display: block;
+                height: 200px;
+                z-index: auto;
+                background-image: url(https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+                background-position: center;
+                border-bottom: 2px groove azure;
+            }
+        </style>
     </head>
     
-    <body style="width: -webkit-fill-available; font-family: 'Roboto Condensed', sans-serif; background-color:black;">
-    
-        <header style="background-color: silver; font-weight: bolder; color: black; padding: 10px 0px 1px 37px;">
-            
-            <img id="landingPic" src="../images/profilePic.jpg" alt="Mugshot of Dallas Eaton" style="float: left;
-              width: 100px; height: auto; margin: 10px 12px; border-radius: 18px; border: white solid 2px;">
-              
-            <h1 class="title_heading" style="font-family: 'Roboto Mono', Monospace; text-shadow: 1px 1px palegreen;">Welcome to my Home Page!</h1>
-            
-        </header>
+    <body>
         
-        <hr>
-        <blockquote cite="https://www.brainyquote.com/quotes/horace_mann_132471" 
-            style="font-family:'Trebuchet MS', Helvetica, sans-serif; color: white; text-align: right; display: inline-block;">
-            <i>"To pity distress is but human; to relieve it is godlike."</i>
-            <br><b>- Horace Mann</b>
-        </blockquote>
-        <main style="height: 24em; margin-top: 5em;">
-            <table style="color: white; width:100%;">
-                <tr style="font-family: 'Roboto Mono', Monospace; color: palegreen">
-                    <th><u>Course #</u></th>
-                    <th><u>Course Description</u></th>
-                    <th><u>Sec #</u></th>
-                    <th><u>Class Time</u></th>
-                    <th><u>Class Location</u></th>
-                </tr>
-                <tr>
-                    <td style="text-align: center; padding-top: 25px;">REL 225C</td>
-                    <td style="text-align: center; padding-top: 25px;">Foundations of the Restoration</td>
-                    <td style="text-align: center; padding-top: 25px;">68</td>
-                    <td style="text-align: center; padding-top: 25px;">-</td>
-                    <td style="text-align: center; padding-top: 25px;">Online</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; padding-top: 25px;">CS 246</td>
-                    <td style="text-align: center; padding-top: 25px;">Software Design and Development</td>
-                    <td style="text-align: center; padding-top: 25px;">5</td>
-                    <td style="text-align: center; padding-top: 25px;">-</td>
-                    <td style="text-align: center; padding-top: 25px;">Online</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; padding-top: 25px;">CS 213</td>
-                    <td style="text-align: center; padding-top: 25px;">Web Engineering I</td>
-                    <td style="text-align: center; padding-top: 25px;">4</td>
-                    <td style="text-align: center; padding-top: 25px;">-</td>
-                    <td style="text-align: center; padding-top: 25px;">Online</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; padding-top: 25px;">WDD 230</td>
-                    <td style="text-align: center; padding-top: 25px;">Web Frontend Development</td>
-                    <td style="text-align: center; padding-top: 25px;">4</td>
-                    <td style="text-align: center; padding-top: 25px;">-</td>
-                    <td style="text-align: center; padding-top: 25px;">Online</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; padding-top: 25px;">FAML 120</td>
-                    <td style="text-align: center; padding-top: 25px;">Parenting Skills</td>
-                    <td style="text-align: center; padding-top: 25px;">Starts:<br>06/08/2020</td>
-                    <td style="text-align: center; padding-top: 25px;">-</td>
-                    <td style="text-align: center; padding-top: 25px;">Online</td>
-                </tr>
-            </table> 
-        </main>  
-        <hr>  
-        <footer style="position: absolute; left: 0; bottom: 0; height: auto; width: -webkit-fill-available; font-size: large; 
-                      font-weight: 600; text-align: center; background-color: silver; color: black; padding: 1em; text-shadow: 1px 1px palegreen;">
-                      
+        <header>            
+            <img id="self-image" src="../images/profilePic.jpg" alt="Mugshot of Dallas Eaton">            
+            <h1 class="title_heading">Welcome to my Home Page!</h1>    
+        </header>
+        <div class="banner">
+            
+        </div>
+        <div class="body_container">
+            <div class="body_content">
+                
+                <hr style="margin: 0; height: auto;">
+                <blockquote cite="https://www.brainyquote.com/quotes/horace_mann_132471" 
+                    style="font-family:'Sansita', sans-serif; text-align: right; z-index: 2; float: right;">
+                        <i>"To pity distress is but human; to relieve it is godlike."</i>
+                        <br><b>- Horace Mann</b>
+                </blockquote>
+
+                <main style="margin-top: 5em;">
+                    <hr>
+                    <p style="padding: 2em; background-color: #019ee9; font-family: 'Sansita', sans serif; font-weight: 700; 
+                    font-style: normal; border: 1.5px solid azure; margin: 0;"> Week </p>
+                    <hr>
+                    <div class="course_box">
+                        <table class="courses" style=" width:100%; margin: 1em;">
+                            <tr style="font-family: 'Roboto Mono', Monospace; color: #019ee9">
+                                <th><u>Course #</u></th>
+                                <th><u>Course Description</u></th>
+                                <th><u>Sec #</u></th>
+                                <th><u>Class Time</u></th>
+                                <th><u>Class Location</u></th>
+                            </tr>
+                            <tr>
+                                <td>REL 225C</td>
+                                <td>Foundations of the Restoration</td>
+                                <td>68</td>
+                                <td>-</td>
+                                <td>Online</td>
+                            </tr>
+                            <tr>
+                                <td>CS 246</td>
+                                <td>Software Design and Development</td>
+                                <td>5</td>
+                                <td>-</td>
+                                <td>Online</td>
+                            </tr>
+                            <tr>
+                                <td>CS 213</td>
+                                <td>Web Engineering I</td>
+                                <td>4</td>
+                                <td>-</td>
+                                <td>Online</td>
+                            </tr>
+                            <tr>
+                                <td>WDD 230</td>
+                                <td>Web Frontend Development</td>
+                                <td>4</td>
+                                <td>-</td>
+                                <td>Online</td>
+                            </tr>
+                            <tr>
+                                <td>FAML 120</td>
+                                <td>Parenting Skills</td>
+                                <td>Starts:<br>06/08/2020</td>
+                                <td>-</td>
+                                <td>Online</td>
+                            </tr>
+                        </table>
+                    </div> 
+                </main>
+
+            </div>
+        </div>  
+        <footer>
+                    
             © 2020 | Dallas Eaton | Michigan | Bachelor of Applied Technology | BYU-Idaho | 
-            <a class="home" href="../index.html" style="color: darkblue;"> CS 213 Assignments</a> 
+            <a class="home" href="../index.html"> CS 213 Assignments</a> 
             <br>
             Last Updated: 
             <span id="todaysDate"></span>
             <script src="../js/todaysDate.js"></script>
             
-        </footer>
-        
+        </footer>  
     </body>
 </html>

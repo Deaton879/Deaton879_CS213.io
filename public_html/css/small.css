@@ -1,49 +1,85 @@
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Mono', Monospace;
-}
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+
 
 body {
-    max-width: 900px;
+
+    width: -webkit-fill-available; 
     font-family: 'Roboto Condensed', sans-serif;
-    margin: 0 auto;
-    background-color:black;
-    border: white solid 1.5px;
+    background-image: url(https://cdn.cdkeys.com/media/wysiwyg/cdkeys/backgrounds/default/White-background_6.jpg);
+}
+
+.body_container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #111417;
+}
+.body_content {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border: #292f36 1px solid;
 }
 
 header {
-    background-color: silver;
-    font-weight: bolder;
-    color: black;
+    background-color: #292f36;
+    margin: auto; 
+    font-weight: black; 
+    color: azure; 
     padding: 10px 0px 1px 37px;
+    border-bottom: 2px groove azure;
+    border-top: 2em solid #111417;
 }
 
-#landingPic {
-    width: 200px;
-    height: auto;
-    margin: 10px 12px;
-    border-radius: 18px;
-    border: white solid 2px;
+.title_heading {
+    font-family: 'Sansita', sans-serif; 
+    font-size: xx-large; 
+    text-shadow: -2px 2px black;
 }
 
+#self-image {
+    float: right;
+    width: 100px; 
+    height: auto; 
+    margin: 10px 12px; 
+    border-radius: 12px; 
+    border: 2px groove azure;
+}
+
+hr {
+    height: 1.5px;
+    background-color: #f09d09;
+}
 ul {
     list-style-type: none;
 }
 
-.byu {
+.home {
     text-decoration: none;
-    color: darkblue;
+    color: #019ee9;
 }
 
-.byu:hover {
-    color: lightgreen;
+.home:hover {
+    color: #f09d09;
     font-weight: bold;
 } 
 
+.course_box td {
+    text-align: center; padding-top: 25px;
+}
+
 footer{ 
-    font-size: large;
-    font-weight: 600;
-    text-align: center;
-    background-color: silver;
-    color: black;
+    font-family: 'Sansita', sans-serif;
+    font-weight: 400;
+    color: azure;
+    text-shadow: -2px 2px black;
+    left: 0; 
+    bottom: 0; 
+    height: auto; 
+    width: -webkit-fill-available; 
+    text-align: center; 
+    background-color: #292f36; 
+    border-top: 1.5px groove white; 
     padding: 1em;
 }
