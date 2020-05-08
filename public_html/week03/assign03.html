@@ -50,7 +50,7 @@
                 <ul class="nav-list">
                     <li class="nav-button"><a class="nav-link" href="../index.html">Assignments</a></li>
                     <li class="nav-button"><a class="nav-link" href="#clist">Courses</a></li>
-                    <li class="nav-button"><a class="nav-link" href="#toform">Form</a></li>
+                    <li class="nav-button"><a class="nav-link" href="#template-form">Form</a></li>
                 </ul>
             </nav>
         </header>
@@ -69,12 +69,13 @@
 
                 <main style="margin-top: 5em;">
                     <hr>
-                    <div style="padding: 1em; background-color: #019ee9; border-radius: 20px; font-family:'Sansita', sans serif; font-weight: 700; 
-                    font-style: normal; border: 1.5px solid azure; margin: 0px 10px 0px 10px;"><h2 style="background-color: #019ee9; color: azure; margin: 0; 
-                    ">Welcome to my Homepage!</h2><p style="font-family: 'Roboto Condensed', sans serif; font-weight: 500;">I am eager to hone my web engineering skills here in CS 231, and I look forward to 
+                    <div style="padding: 1em; background-color: #019ee9; border-radius: 5px; font-family:'Sansita', sans serif; font-weight: 700; 
+                    font-style: normal; border: 1.5px solid azure; margin: 0px 10px 0px 10px;"><h2 style="color:; margin: 0; 
+                    ">Welcome to my Homepage!</h2><p style="font-family: 'Roboto Condensed', sans serif; color: azure; font-weight: 500;">I am eager to hone my web engineering skills here in CS 231, and I look forward to 
                         opportunities this semester where I will be able to help others do the same. You might have noticed my quote 
-                        in the banner above..<br><br><b>I really like this quote for two reasons:</b><br><br><b>1)</b> It's so true!<br><b>2)</b> It mirrors my belief that the
-                        best place to find God is outside of ourselves, and the best way to seek Him is through service. </p></div>
+                        in the banner above..<br><br><b style="color: black; font-family: 'Sansita', sans serif;">I really like this quote for two reasons:</b><br><br><b>1)</b> It's so true!<br><b><br>2)</b> It mirrors my belief that the
+                        best place to find God is outside of ourselves, and the best way to seek Him is through service. </p>
+                    </div>
                     <hr>
                     <div class="course_box" id="clist">
                         <table class="courses" style=" width:100%; margin: 1em;">
@@ -122,8 +123,77 @@
                             </tr>
                         </table>
                     </div> 
+                    <hr>
+                    <div id="template-form">
+                        <form method="post">
+                        <h1 style="text-align: right;">Website Form</h1>
+                          <p><i>Required fields are followed by </i><strong><abbr title="required"> * </abbr></strong>.</p>
+                          <hr>
+                          <section id="three-select">
+                            <h3>Select Menu</h3>
+                            <p>
+                                <label for="drop-down">
+                                    <span>Choose an option<abbr title="required" aria-label="required"> * </abbr></span>
+                                </label>
+                                <select id="drop-down" name="select">
+                                    <option value="good">good</option>
+                                    <option value="better">Better</option>
+                                    <option value="best">BEST</option>
+                                </select>
+                            </p>
+                          </section>
+                          <fieldset id="text-boxes">
+                            <legend>Text-Entry Boxes</legend>
+                            <ul>
+                              <li>
+                                <label for="one-line">Single-line text entry: <abbr title="required" aria-label="required"> * </abbr></label>
+                                <input type="text" id="one-line" name="single-line">
+                              </li>
+                              <br>
+                              <li>
+                                <label for="many-lines">Multi-line text entry: </label>
+                                <textarea id="many-lines" name="multi-line"></textarea>
+                              </li>
+                            </ul>
+                          </fieldset>
+                          <hr style="margin: 15px auto 15px auto;">
+                          <fieldset id="radio-nowhere">
+                            <legend>3 Radio Buttons</legend>
+                            <p>
+                              <input type="radio" name="option" id="opt_1" value="one">
+                              <label for="opt_1">Option 1</label>
+                            </p>
+                            <p>
+                              <input type="radio" name="option" id="opt_2" value="two">
+                              <label for="opt_2">Option 2</label>
+                            </p>
+                            <p>
+                              <input type="radio" name="option" id="opt_3" value="three">
+                              <label for="opt_3">Option 3</label>
+                            </p>
+                          </fieldset>
+                          <fieldset id="checkmate">
+                            <legend>3 Checkboxes</legend>
+                            <p>
+                              <input type="checkbox" id="check1" name="check-a-box" value="one">
+                              <label for="check1">Check 1</label>
+                            </p>
+                            <p>
+                              <input type="checkbox" id="check2" name="check-a-box" value="two">
+                              <label for="check2">Check 2</label>
+                            </p>
+                            <p>
+                              <input type="checkbox" id="check3" name="check-a-box" value="three">
+                              <label for="check3">Check 3</label>
+                            </p>
+                          </fieldset>
+                          <div id="gen-exo">
+                            <p> <button id="genesis" type="reset">Reset</button> </p>
+                            <p> <button id="exodus" type="submit">Submit</button> </p>
+                        </form>
+                    </div>
                 </main>
-
+                
             </div>
         </div>  
         <footer>
