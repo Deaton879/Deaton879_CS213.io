@@ -19,59 +19,75 @@ body {
     width: 100%;
     margin: auto;
     background-color: white;
-    border: #292f36 1px solid;
+    border: #f09d09 1px solid;
 }
 
 header {
     background-color: #292f36;
     margin: auto; 
-    font-weight: black; 
+    font-weight: bolder; 
     color: azure; 
     padding: 10px 0px 1px 37px;
-    border-bottom: 2px groove azure;
-    border-top: 2em solid #111417;
+    border-bottom: .8em solid #111417;
+    border-top: 1.8em solid #111417;
 }
+
+.nav-container {
+    height: 30%;
+    display: inline-flex;
+}
+
+.nav-list {
+    display: inline-flex;
+}
+
+.nav-button, .nav-link {
+    padding: .25em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-link:visited {
+    color: #019ee9;
+}
+
+.nav-button:hover, .nav-link:hover {
+    color: #f09d09;
+    font-weight: bold;
+} 
 
 .title_heading {
     font-family: 'Sansita', sans-serif; 
-    font-size: xx-large; 
     text-shadow: -2px 2px black;
+    margin: 1% 39% 3% 2%;
 }
 
 #self-image {
     float: right;
     width: 100px; 
     height: auto; 
-    margin: 10px 12px; 
     border-radius: 12px; 
-    border: 2px groove azure;
+    border: 1px solid #019ee9;
 }
 
 hr {
-    height: 1.5px;
+    height: 1.2px;
+    width: 85%;
     background-color: #f09d09;
+    margin: 3px auto 3px auto;
+    border: black 1px solid;
 }
+
 ul {
     list-style-type: none;
 }
-
-.home {
-    text-decoration: none;
-    color: #019ee9;
-}
-
-.home:hover {
-    color: #f09d09;
-    font-weight: bold;
-} 
 
 .course_box td {
     text-align: center; padding-top: 25px;
 }
 
 footer{ 
-    font-family: 'Sansita', sans-serif;
-    font-weight: 400;
+    font-weight: bolder;
     color: azure;
     text-shadow: -2px 2px black;
     left: 0; 
@@ -83,3 +99,19 @@ footer{
     border-top: 1.5px groove white; 
     padding: 1em;
 }
+
+.social img {
+    height: 45px; 
+    margin: 8px 5px 0px 5px; 
+    box-shadow: 0px 0px 2px azure; 
+    border-radius: 50px;
+}
+
+#ghub:hover{
+    cursor: inherit;
+    mix-blend-mode: color-burn;
+  }
+  #fbook:hover{
+    cursor: inherit;
+    mix-blend-mode: color-dodge;
+  }

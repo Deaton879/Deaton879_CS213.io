@@ -32,7 +32,11 @@
                 z-index: auto;
                 background-image: url(https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
                 background-position: center;
-                border-bottom: 2px groove azure;
+                border-bottom: 2px solid black;
+            }
+
+            #todaysDate {
+                color:#019ee9;
             }
         </style>
     </head>
@@ -41,7 +45,14 @@
         
         <header>            
             <img id="self-image" src="../images/profilePic.jpg" alt="Mugshot of Dallas Eaton">            
-            <h1 class="title_heading">Welcome to my Home Page!</h1>    
+            <h1 class="title_heading">CS 213 Course Homepage</h1><hr style="width: 59%; margin: 0; border: black 1px solid;">    
+            <nav class="nav-container">
+                <ul class="nav-list">
+                    <li class="nav-button"><a class="nav-link" href="../index.html">Assignments</a></li>
+                    <li class="nav-button"><a class="nav-link" href="#clist">Courses</a></li>
+                    <li class="nav-button"><a class="nav-link" href="#toform">Form</a></li>
+                </ul>
+            </nav>
         </header>
         <div class="banner">
             
@@ -49,19 +60,23 @@
         <div class="body_container">
             <div class="body_content">
                 
-                <hr style="margin: 0; height: auto;">
+                <hr>
                 <blockquote cite="https://www.brainyquote.com/quotes/horace_mann_132471" 
-                    style="font-family:'Sansita', sans-serif; text-align: right; z-index: 2; float: right;">
+                    style="font-family:'Sansita', sans-serif; text-align: right; z-index: 2; float: right; padding-right: 12px; border-right: 2px groove #f09d09;">
                         <i>"To pity distress is but human; to relieve it is godlike."</i>
                         <br><b>- Horace Mann</b>
                 </blockquote>
 
                 <main style="margin-top: 5em;">
                     <hr>
-                    <p style="padding: 2em; background-color: #019ee9; font-family: 'Sansita', sans serif; font-weight: 700; 
-                    font-style: normal; border: 1.5px solid azure; margin: 0;"> Week </p>
+                    <div style="padding: 1em; background-color: #019ee9; border-radius: 20px; font-family:'Sansita', sans serif; font-weight: 700; 
+                    font-style: normal; border: 1.5px solid azure; margin: 0px 10px 0px 10px;"><h2 style="background-color: #019ee9; color: azure; margin: 0; 
+                    ">Welcome to my Homepage!</h2><p style="font-family: 'Roboto Condensed', sans serif; font-weight: 500;">I am eager to hone my web engineering skills here in CS 231, and I look forward to 
+                        opportunities this semester where I will be able to help others do the same. You might have noticed my quote 
+                        in the banner above..<br><br><b>I really like this quote for two reasons:</b><br><br><b>1)</b> It's so true!<br><b>2)</b> It mirrors my belief that the
+                        best place to find God is outside of ourselves, and the best way to seek Him is through service. </p></div>
                     <hr>
-                    <div class="course_box">
+                    <div class="course_box" id="clist">
                         <table class="courses" style=" width:100%; margin: 1em;">
                             <tr style="font-family: 'Roboto Mono', Monospace; color: #019ee9">
                                 <th><u>Course #</u></th>
@@ -113,13 +128,16 @@
         </div>  
         <footer>
                     
-            © 2020 | Dallas Eaton | Michigan | Bachelor of Applied Technology | BYU-Idaho | 
-            <a class="home" href="../index.html"> CS 213 Assignments</a> 
+            © 2020 | Dallas Eaton | Michigan | Bachelor of Applied Technology | BYU-Idaho   
             <br>
             Last Updated: 
             <span id="todaysDate"></span>
             <script src="../js/todaysDate.js"></script>
             
+            <div class="social">
+                <a href="https://github.com/Deaton879" target="_blank"><img id="ghub" src="../images/GitHub-Mark-32px.png"></a>
+                <a href="https://www.facebook.com/dallas.eaton.908" target="_blank"><img id="fbook" src="../images/facebookicon.png"></a>
+            </div>
         </footer>  
     </body>
 </html>
