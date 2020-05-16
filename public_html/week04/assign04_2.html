@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page-2 Business Site</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./css/lesson4small.css">
+        <link rel="stylesheet" href="./css/lesson4large.css">
+        <link rel="stylesheet" href="./css/lesson4medium.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="description" content="Week 4 Assignment: Business Site page 2.">
+
+        <style>
+        main {
+            margin:auto;   
+        }
+        .checked {
+            color: orange;
+        }
+
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        #text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            color: white;
+            transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+        }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            
+            <section class="headerText">
+                <a href="assign04.html"><img id="site-icon" src="./img/godzilla.png" alt="site logo"></a>
+                <h1 id="site-name">Shopzilla.com</h1>
+                <div class="motto">Shop 'til you drop!</div>
+            </section>
+            <button onclick="on()"><img id="shoppingCart" src="./img/cart.png" alt="shopping cart"></button>
+        </header>
+
+        <!--Navigation-->
+        <nav class="nav-container">
+            <ul class="navigation">
+                <li><a class="menu" href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="assign04.html">Home</a></li>
+                <li id="active"><a href="assign04_2.html"> Daily Deals</a></li>
+            </ul>
+        </nav>
+
+        <!--Overlay for cart-->
+        <div id="overlay" onclick="off()">
+            <div id="text">Overlay Text</div>
+        </div>
+        <!--Main Content-->
+        <main>
+            <h2 class="titleHeading">Check Out Our Daily Deals!</h2>
+            <h3>Featured Deal:</h3>
+            <span id="headlineShowcase">
+                <div id="headlineItem"><img id="hotItem" src="#" alt="#" ></div>
+                <div id="headlineStats">
+                    <h3>Product Name Goes Here</h3>
+                    <h3>$99.99</h3>
+                    <h4>Reviews</h4>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>4.1 average based on 201 reviews.</p>
+                    <p id="headlineDescription">The latest and greatest, you can't go without it! just look and see for yourself, 4/5 star review and it's selling fast!</p>
+                </div>
+
+                <span id="otherSales">Shop our other (less cool) deals by category below</span>
+                <hr>
+                <div id="otherContent">
+                    <h4>Category 1</h4>
+                    <h4>Category 2</h4>
+                    <h4>Category 3</h4>
+                    <h4>Category 4</h4>
+                    <h4>Category 5</h4>
+                </div>
+            </span>
+            <h4></h4>
+        </main>
+
+        <!--Footer-->
+        <footer>
+            © 2020 Shopzilla.com  
+            <br><br>
+            <span id="todaysDate"></span>
+            <script src="js/currentDate.js"></script>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </footer>
+
+        <!--Scripts for responsive menu and cart overlay-->
+        <script src="js/responsiveMenu.js"></script> 
+        <script>
+            function on() {
+              document.getElementById("overlay").style.display = "block";
+            }
+            
+            function off() {
+              document.getElementById("overlay").style.display = "none";
+            }
+        </script> 
+
+    </body>
+</html>

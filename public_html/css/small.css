@@ -46,9 +46,10 @@ header {
     text-transform: uppercase;
 }
 
-.nav-link:visited {
+.nav-link {
     color: #019ee9;
 }
+
 
 .nav-button:hover, .nav-link:hover {
     color: #f09d09;

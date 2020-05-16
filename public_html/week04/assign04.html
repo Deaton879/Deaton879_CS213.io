@@ -3,19 +3,179 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dallas Eaton's Week 04 Assignment</title>
+        <title>Homepage Business Site</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./css/lesson4small.css">
+        <link rel="stylesheet" href="./css/lesson4large.css">
+        <link rel="stylesheet" href="./css/lesson4medium.css">
+        <meta name="description" content="Week 4 Assignment: Business site homepage.">
+
+        <style>
+            @media only screen and (min-width: 60rem) {
+                #capContainer{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    padding: 65px;
+                    margin: auto;
+                    background-color: rgba(180, 221, 127, .5);
+                }
+            }
+             
+            .click-a-pic {
+                max-width: 375px;
+                max-height: 325px;
+                color: rgba(180, 221, 127, 1);
+                border: 1.2px dashed rgba(57, 57, 58, .5);
+                margin-bottom: 7px;
+            }
+
+            .click-a-pic p {
+                position: absolute;
+                padding: 1rem;
+                background-color: rgba(112,105,147, .8);
+                width: 343px;
+                text-shadow: -2px 1px 1px rgba(57,57,58,1);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 700;
+                text-align: right;
+            }
+
+            .click-a-pic img {
+                height: 325px;
+                max-width: -webkit-fill-available;
+                z-index: 1;
+            }
+
+            .click-a-pic a:hover {
+                color-interpolation-filters: sRGB;
+            }
+
+            #overlay {
+                position: fixed;
+                display: none;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 2;
+                cursor: pointer;
+            }
+
+            #text{
+                display: grid;
+                width: -webkit-fill-available;
+                background-color: rgba(204,209,217,1);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 40px;
+                transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                padding: 2rem;
+            }
+
+            #text h6 {
+                color: rgba(112,105,147, 1);
+                margin: 1rem;
+            }
+            #text span {
+                color: white;
+                border: .5rem groove azure;
+                padding: 4rem 2rem 4rem 2rem;
+                font-size: large;
+                background-color: rgba(112,105,147, .5);
+
+            }
+            #text p {
+                font-size: 1.25rem;
+                color: rgba(57, 57, 58, 1);
+                margin: 1rem;
+            }
+
+        </style>
     </head>
+
     <body>
+
         <header>
-            <!--Header Content Here-->
-            <h1 class="title_heading">This will be assignment #4</h1>
+            <section class="headerText"> 
+                <a href="assign04.html"><img id="site-icon" src="./img/godzilla.png" alt="site logo"></a>
+                <h1 id="site-name">Shopzilla.com</h1>
+                <p class="motto">Shop 'til you drop!</p>
+            </section>
+            <button onclick="on()"><img id="shoppingCart" src="./img/cart.png" alt="shopping cart"></button>
         </header>
+
+        <!--Navigation-->
+        <nav class="nav-container">
+            <ul class="navigation">
+                <li><a class="menu" href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li id="active">
+                    <a href="assign04.html">Home</a>
+                </li>
+                <li><a href="assign04_2.html"> Daily Deals</a></li>
+            </ul>
+        </nav>
+        <!--Overlay for the cart-->
+        <div id="overlay" onclick="off()">
+            <div id="text">
+                <h6>Your Cart</h6>
+                <p>Items: 0</p>
+                <h6>Contents:</h6>
+                <span>Your Cart Is Empty!</span>
+                <p>Subtotal: $0.00</p>
+                <p>Tax: $0.00</p>
+            </div>
+        </div>
+
+        <!--Main section-->
         <main>
-            <!--Main Content Here-->
-            <p class="main_p"></p>
-        </main>      
+            <h2 class="titleHeading">Shop by Category</h2>
+            <span id="capContainer">
+                <div class="click-a-pic">
+                    <p>GADGETS</p>
+                    <a href="#" alt="Photo by Héctor Martínez on Unsplash"><img src="./img/Gadgets.jpg"></a>    
+                </div>
+                <div class="click-a-pic">
+                    <p>HOME DECOR</p>
+                    <a href="#" alt="Photo by NeONBRAND on Unsplash"><img src="./img/homeDecor.jpg"></a>
+                </div>
+                <div class="click-a-pic">
+                    <p>OUTDOORS</p>
+                    <a href="#" alt="Photo by Julian Bialowas on Unsplash"><img src="./img/outdoor.jpg"></a>
+                </div>
+                <div class="click-a-pic">
+                    <p>CLOTHING + APPAREL</p>
+                    <a href="#" alt="Photo by Artificial Photography on Unsplash"><img src="./img/apparel.jpg"></a>
+                </div>
+                
+            </span>    
+        </main>
+
+        <!--Footer-->
         <footer>
+            © 2020 Shopzilla.com  
+            <br><br>
+            <span id="todaysDate"></span>
+            <script src="js/currentDate.js"></script>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </footer>
+
+        <!--Scripts for responsive menu and for the overlay-->
+        <script src="js/responsiveMenu.js"></script>
+        <script>
+            function on() {
+              document.getElementById("overlay").style.display = "block";
+            }
+            
+            function off() {
+              document.getElementById("overlay").style.display = "none";
+            }
+        </script> 
+
     </body>
 </html>
