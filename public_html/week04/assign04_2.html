@@ -12,9 +12,16 @@
         <meta name="description" content="Week 4 Assignment: Business Site page 2.">
 
         <style>
-        main {
-            margin:auto;   
+
+        main h3, main h4 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 10px;
         }
+
+        main p{
+            font-family: cursive;
+        }
+
         .checked {
             color: orange;
         }
@@ -34,22 +41,109 @@
         }
 
         #text{
+            display: grid;
+            width: -webkit-fill-available;
+            background-color: rgba(204,209,217,1);
             position: absolute;
             top: 50%;
             left: 50%;
-            font-size: 50px;
-            color: white;
+            font-size: 40px;
             transform: translate(-50%,-50%);
             -ms-transform: translate(-50%,-50%);
+            padding: 2rem;
         }
 
+        #text h6 {
+            color: rgba(112,105,147, 1);
+            margin: 1rem;
+        }
+
+        #text span {
+            color: white;
+            border: .5rem groove azure;
+            padding: 4rem 2rem 4rem 2rem;
+            font-size: large;
+            background-color: rgba(112,105,147, .5);
+
+        }
+
+        #text p {
+            font-size: 1.25rem;
+            color: rgba(57, 57, 58, 1);
+            margin: 1rem;
+        }
+
+        #headlineShowcase {
+            display: flex;
+            padding: 1rem;
+            background: rgba(180, 221, 127, .8);
+            border: 1px dotted rgba(57, 57, 58, 1);
+        }
+        #hotItem, #headlineItem{
+            margin: auto;
+            max-width: 420px;
+            border-radius: 5px;
+        }
+        #hotItem {
+            border: 1.2px dashed rgba(57, 57, 58, .5);
+        }
+        #headlineStats {
+            padding: 1rem;
+        }
+        #headlineStats h3 {
+            font-size: x-large;
+            margin: 0;
+            text-align: right;
+        }
+        #price {
+            text-align: right;
+            margin: 0px 0px -10px auto;
+            max-width: fit-content;
+            text-shadow: 1px 1px 1px rgba(112,105,147, 1);
+            color: black;
+            padding: .25rem;
+            border-radius: 5px;
+        }
+
+        #reviews h4 {
+            margin: 5px 3px;
+            text-decoration: underline;
+            color: rgba(57, 57, 58, 1);
+        }
+        #reviews p {
+            color: rgba(112,105,147, 1);
+            margin: 5px 3px;
+        }
+
+        #headlineDescription {
+            background-color: rgba(112,105,147, .7);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        #otherSales {
+            display: block;
+            font-family: cursive;
+            margin-left: 50px;
+            padding: 1rem;
+        }
+        
+        @media only screen and (max-width: 32rem) {
+            #headlineShowcase {
+                display: block;
+            }
+
+            #hotItem {
+                max-width: 350px;
+            }
+        } 
+            
         </style>
     </head>
 
     <body>
 
-        <header>
-            
+        <header>            
             <section class="headerText">
                 <a href="assign04.html"><img id="site-icon" src="./img/godzilla.png" alt="site logo"></a>
                 <h1 id="site-name">Shopzilla.com</h1>
@@ -69,28 +163,38 @@
 
         <!--Overlay for cart-->
         <div id="overlay" onclick="off()">
-            <div id="text">Overlay Text</div>
+            <div id="text">
+                <h6>Your Cart</h6>
+                <p>Items: 0</p>
+                <h6>Contents:</h6>
+                <span>Your Cart Is Empty!</span>
+                <p>Subtotal: $0.00</p>
+                <p>Tax: $0.00</p>
+            </div>
         </div>
         <!--Main Content-->
         <main>
             <h2 class="titleHeading">Check Out Our Daily Deals!</h2>
             <h3>Featured Deal:</h3>
             <span id="headlineShowcase">
-                <div id="headlineItem"><img id="hotItem" src="#" alt="#" ></div>
+                <div id="headlineItem"><img id="hotItem" src="./img/camera.jpg" alt="Photo by Howard Bouchevereau on Unsplash" ></div>
                 <div id="headlineStats">
-                    <h3>Product Name Goes Here</h3>
-                    <h3>$99.99</h3>
-                    <h4>Reviews</h4>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <p>4.1 average based on 201 reviews.</p>
+                    <h3>Canon Camera</h3>
+                    <h4 id="price">$99.99</h4>
+                    <div id="reviews">
+                        <h4>Reviews</h4>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <p>4.1 average based on 201 reviews.</p>
+                    </div>
                     <p id="headlineDescription">The latest and greatest, you can't go without it! just look and see for yourself, 4/5 star review and it's selling fast!</p>
+                    
                 </div>
-
-                <span id="otherSales">Shop our other (less cool) deals by category below</span>
+            </span>
+            <span id="otherSales">Shop our other (less cool) deals by category below</span>
                 <hr>
                 <div id="otherContent">
                     <h4>Category 1</h4>
@@ -105,12 +209,17 @@
 
         <!--Footer-->
         <footer>
+    
             © 2020 Shopzilla.com  
             <br><br>
             <span id="todaysDate"></span>
             <script src="js/currentDate.js"></script>
             <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div class="social">
+                <a href="https://github.com/Deaton879" target="_blank"><img id="ghub" src="../images/GitHub-Mark-32px.png"></a>
+                <a href="https://www.facebook.com/dallas.eaton.908" target="_blank"><img id="fbook" src="../images/facebookicon.png"></a>
+            </div>
         </footer>
 
         <!--Scripts for responsive menu and cart overlay-->

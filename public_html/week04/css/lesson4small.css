@@ -12,7 +12,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: .5rem;
-    border: 1px dotted rgba(252,215,112, 1);
+
 }
 
 header button {
@@ -47,12 +47,14 @@ header button {
     font-family: 'Raleway', sans-serif;
     font-size: large;
     background-color:  rgba(112,105,147,1);
+    border: 1px solid rgba(57,57,58,.7);
 }
 
 .responsive li {
     display: block;
     border-bottom: 1px solid white;
     background-color:  rgba(112,105,147,1);
+    border: 1px solid rgba(57,57,58,.7);
 }
 
 .navigation li:first-child {
@@ -78,7 +80,7 @@ header button {
 
 
 body {
-    background: rgba(204, 209, 217, .1);
+    background: azure;
 }
 
 main {
@@ -112,6 +114,7 @@ h3 {
 
 
 #site-name {
+    text-decoration: underline;
     color:#212121;
     padding-left: 2rem;
     font-size: x-large;
@@ -170,6 +173,7 @@ header button:hover {
 footer div a {
     color: rgba(112,105,147,1);
 }
+
 footer div a:hover {
     color: rgba(252,215,112,1);
 }
@@ -183,5 +187,22 @@ footer {
     margin: auto;
     font-size: small;
     font-weight: 600;
-    border: 1px dotted rgba(252,215,112, 1);
 }
+
+.social {
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 5px;
+}
+.social img {
+    max-width: 33px;
+    padding: 5px;
+    mix-blend-mode: unset;
+    background: white;
+    border-radius: 5px;
+}
+
+.social a:hover {
+    mix-blend-mode: soft-light;
+}
+

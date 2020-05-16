@@ -15,9 +15,10 @@
                 #capContainer{
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    padding: 65px;
+                    padding: 58px;
                     margin: auto;
-                    background-color: rgba(180, 221, 127, .5);
+                    background-color: rgba(180, 221, 127, .3);
+                    border-top: 1.2px dashed rgba(57, 57, 58, .9);
                 }
             }
              
@@ -25,8 +26,8 @@
                 max-width: 375px;
                 max-height: 325px;
                 color: rgba(180, 221, 127, 1);
-                border: 1.2px dashed rgba(57, 57, 58, .5);
-                margin-bottom: 7px;
+                border: 1.2px dashed rgba(57, 57, 58, .4);
+                margin-bottom: 20px;
             }
 
             .click-a-pic p {
@@ -75,11 +76,13 @@
                 transform: translate(-50%,-50%);
                 -ms-transform: translate(-50%,-50%);
                 padding: 2rem;
+                border: 5px solid rgba(57,57,58,1);
             }
 
             #text h6 {
                 color: rgba(112,105,147, 1);
                 margin: 1rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
             #text span {
                 color: white;
@@ -87,12 +90,14 @@
                 padding: 4rem 2rem 4rem 2rem;
                 font-size: large;
                 background-color: rgba(112,105,147, .5);
+                font-family: cursive;
 
             }
             #text p {
                 font-size: 1.25rem;
                 color: rgba(57, 57, 58, 1);
                 margin: 1rem;
+                font-family: monospace;
             }
 
         </style>
@@ -163,6 +168,10 @@
             <script src="js/currentDate.js"></script>
             <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div class="social">
+                <a href="https://github.com/Deaton879" target="_blank"><img id="ghub" src="../images/GitHub-Mark-32px.png"></a>
+                <a href="https://www.facebook.com/dallas.eaton.908" target="_blank"><img id="fbook" src="../images/facebookicon.png"></a>
+            </div>
         </footer>
 
         <!--Scripts for responsive menu and for the overlay-->
