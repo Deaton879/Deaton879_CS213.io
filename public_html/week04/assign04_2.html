@@ -51,11 +51,13 @@
             transform: translate(-50%,-50%);
             -ms-transform: translate(-50%,-50%);
             padding: 2rem;
+            border: 5px solid rgba(57,57,58,1);
         }
 
         #text h6 {
             color: rgba(112,105,147, 1);
             margin: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         #text span {
@@ -64,13 +66,14 @@
             padding: 4rem 2rem 4rem 2rem;
             font-size: large;
             background-color: rgba(112,105,147, .5);
-
+            font-family: cursive;
         }
 
         #text p {
             font-size: 1.25rem;
             color: rgba(57, 57, 58, 1);
             margin: 1rem;
+            font-family: monospace;
         }
 
         #headlineShowcase {
@@ -127,6 +130,13 @@
             margin-left: 50px;
             padding: 1rem;
         }
+
+        .sideScrollDeals {
+            margin: 0 3rem 1rem 3rem;
+            padding-bottom: 2rem;
+            overflow-x: scroll;
+            font-family: monospace;
+        }
         
         @media only screen and (max-width: 32rem) {
             #headlineShowcase {
@@ -176,7 +186,7 @@
         <main>
             <h2 class="titleHeading">Check Out Our Daily Deals!</h2>
             <h3>Featured Deal:</h3>
-            <span id="headlineShowcase">
+            <div id="headlineShowcase">
                 <div id="headlineItem"><img id="hotItem" src="./img/camera.jpg" alt="Photo by Howard Bouchevereau on Unsplash" ></div>
                 <div id="headlineStats">
                     <h3>Canon Camera</h3>
@@ -193,32 +203,33 @@
                     <p id="headlineDescription">The latest and greatest, you can't go without it! just look and see for yourself, 4/5 star review and it's selling fast!</p>
                     
                 </div>
-            </span>
+            </div>
             <span id="otherSales">Shop our other (less cool) deals by category below</span>
                 <hr>
                 <div id="otherContent">
-                    <h4>Category 1</h4>
-                    <h4>Category 2</h4>
-                    <h4>Category 3</h4>
-                    <h4>Category 4</h4>
-                    <h4>Category 5</h4>
+                    <h4>Home Decor</h4>
+                    <section class="sideScrollDeals"><h5>Coming Soon!</h5></section>
+                    <h4>Gadgets</h4>
+                    <section class="sideScrollDeals"><h5>Coming Soon!</h5></section>
+                    <h4>Outdoors and Recreation</h4>
+                    <section class="sideScrollDeals"><h5>Coming Soon!</h5></section>
+                    <h4>Clothing and Apparel</h4>
+                    <section class="sideScrollDeals"><h5>Coming Soon!</h5></section>
+                    <h4>Last Chance Deals!</h4>
+                    <section class="sideScrollDeals"><h5>Coming Soon!</h5></section>
                 </div>
-            </span>
-            <h4></h4>
         </main>
 
         <!--Footer-->
         <footer>
-    
             © 2020 Shopzilla.com  
             <br><br>
             <span id="todaysDate"></span>
             <script src="js/currentDate.js"></script>
             <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             <div class="social">
-                <a href="https://github.com/Deaton879" target="_blank"><img id="ghub" src="../images/GitHub-Mark-32px.png"></a>
-                <a href="https://www.facebook.com/dallas.eaton.908" target="_blank"><img id="fbook" src="../images/facebookicon.png"></a>
+                <a href="https://github.com/Deaton879" target="_blank"><img id="ghub" src="../images/GitHub-Mark-32px.png" alt="github icon"></a>
+                <a href="https://www.facebook.com/dallas.eaton.908" target="_blank"><img id="fbook" src="../images/facebookicon.png" alt="facebook icon"></a>
             </div>
         </footer>
 
