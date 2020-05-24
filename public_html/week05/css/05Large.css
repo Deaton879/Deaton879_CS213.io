@@ -1,0 +1,60 @@
+@media only screen and (min-width: 60rem) {
+
+    .navigation {
+        display: flex;
+    }
+
+    #active {
+        background: rebeccapurple;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+        border-radius: 2px;
+        color: transparent;
+    }
+
+    .navigation a {
+        padding: .8rem 1rem;
+    }
+
+    #one:hover, #one a:hover {
+        background-color: greenyellow;
+        color: teal;
+    }
+
+    #two:hover, #two a:hover{
+        background-color: orange;
+        color: darkred;
+    }
+
+    #three:hover, #three a:hover {
+        background-color: yellow;
+        color: darkgoldenrod;
+    }
+
+    #four:hover, #four a:hover {
+        background-color: orangered;
+        color: white;
+    }
+
+    #five:hover, #five a:hover {
+        background-color: violet;
+        color: indigo;
+    }
+
+
+
+
+
+
+
+
+
+}

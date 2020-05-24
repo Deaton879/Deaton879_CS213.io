@@ -1,21 +1,122 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dallas Eaton's Week 05 Assignment</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./css/05small.css">
+        <link rel="stylesheet" href="./css/05medium.css">
+        <link rel="stylesheet" href="./css/05Large.css">
     </head>
+
+
     <body>
-        <header>
+
+        <header id="top">
             <!--Header Content Here-->
-            <h1 class="title_heading">This will be assignment #5</h1>
+            <h1 class="title_heading">Week 05</h1>
+            <h1 class="middle_heading">CS 213</h1>
+            <h1 class="right_heading">Dallas Eaton</h1>
         </header>
+        <nav class="nav-container">
+            <button onclick="toggleMenu()" id="menu">&#9776; Menu</button>
+            <ul class="navigation">
+                <li id="active">
+                    <a href="assign05.html">Home</a>
+                </li>
+                <li id="one"><a href="#first">First</a></li>
+                <li id="two"><a href="#fore">Foremost</a></li>
+                <li id="three"><a href="#form">Formidable</a></li>
+                <li id="four"><a href="#final">Final</a></li>
+                <li id="five"><a href="#bottom">Footer</a></li>
+            </ul>
+        </nav>
+        <div class="hero-image">
+            <div class="hero-text">
+              <h1 style="font-size:4em">Welcome to week 5!</h1>
+              <p>Photo by Jane Duursma on Unsplash</p>
+            </div>
+        </div>
         <main>
             <!--Main Content Here-->
-            <p class="main_p"></p>
-        </main>      
+            <section>
+                <h2 id="first" > The First.. </h2>
+                <p class="responsivePar">But I must explain to you how all this mistaken idea of denouncing pleasure 
+                    and praising pain was born and I will give you a complete account of the system, and expound the 
+                    actual teachings of the great explorer of the truth, the master-builder of human happiness.<br><br>
+
+                    No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who
+                     do not know how to pursue pleasure rationally encounter consequences that are extremely painful. 
+                     Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is 
+                     pain, but because occasionally.</p>
+                <div class="imgBox">
+                    <img src="./images/pepe-cast-zam--unsplash.jpg" alt="Photo by Pepe Cast Zam on Unsplash">
+                </div>
+            </section>
+            <section>
+                <h2 id="fore" > ..The Foremost.. </h2>
+                <p class="responsivePar">Far far away, behind the word mountains, far from the countries Vokalia and 
+                    Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast 
+                    of the Semantics, a large language ocean.<br><br>
+
+                    A small river named Duden flows by their place and supplies it with the necessary regelialia. It is 
+                    a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful
+                     Pointing has no control about the blind texts it is an almost unorthographic life One day however a 
+                     small line of blind text by the name.</p>
+
+                <div class="imgBox">
+                    <img src="./images/matildababaeva-unsplash.jpg" alt="Photo by Chema Photo on Unsplash">
+                </div>
+            </section>
+            <section>
+                <h2 id="form" > ..The Formidable.. </h2>    
+                <p class="responsivePar">A wonderful serenity has taken possession of my entire soul, like these sweet 
+                    mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence 
+                    in this spot, which was created for the bliss of souls like mine.<br><br>
+
+                    I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that 
+                    I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and 
+                    yet I feel that I never was a greater artist than now.</p>
+
+                <div class="imgBox">
+                    <img src="./images/tony-liao-unsplash.jpg" alt="Photo by Tony Liao on Unsplash">
+                </div>
+            </section>
+            <section>
+                <h2 id="final" > ..The Final </h2>
+                <p class="responsivePar">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. 
+                    Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick 
+                    jigs vex!<br><br>
+
+                    Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl
+                     quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew 
+                     my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick,
+                      Baz, get my woven flax jodhpurs!</p>
+
+                <div class="imgBox">
+                    <img src="./images/chema-photo-unsplash.jpg" alt="Photo by ᒷ⟁⨃.ᖇ.ᕮ.∥.ᕮ on Unsplash">
+                </div>
+            </section>
+        </main>  
+        
+        
         <footer>
+            <h3>© 2020 Responsive_Web_Design</h3>
+            <a id="bottom" href="#top"><h4>To Top</h4></a>  
+
+            <ul class="socialInfo">
+                <li class="png"><a href="https://facebook.com"><img src="./images/facebook-social-media-pngrepo-com.png"  alt="Facebook Icon"></a></li>
+                <li class="png"><a href="https://twitter.com"><img src="./images/twitter-social-media-pngrepo-com.png" alt="Twitter Icon"></a></li>
+                <li class="png"><a href="https://pintrest.com"><img src="./images/pinterest-social-media-pngrepo-com.png" alt="Pintrest"></a></li>
+                <li class="png"><a href="https://whatsapp.com"><img src="./images/whatsapp-social-media-pngrepo-com.png" alt="Whatsapp"></a></li>
+            </ul>
         </footer>
+        <script src="js/responsiveMenu.js"></script>
+        
     </body>
+
+
 </html>
