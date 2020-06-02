@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page for the University Arts Department</title>
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="css/week6small.css">
+        <link rel="stylesheet" href="css/week6med.css">
+        <link rel="stylesheet" href="css/week6large.css">
+        <link rel="shortcut icon" href="./images/Trivium_University_Favicon.ico">
+        <meta name="description=" content="Trivium University of Grammar, Logic, and Rhetoric">
+    </head>
+
+    <body>
+
+        <header>
+            <a href="University.html"><img class="logo" src="./images/Trivium_University_Crest.png" alt="University's logo icon."></a>
+            <section class="headerText">
+                <h1 class="h-title">Trivium University</h1>
+                <p class="school-motto"><i>"The place where three roads meet."</i></p>
+            </section>
+        </header>
+
+        <nav class="nav-container">
+            <button onclick="toggleMenu()" id="menu">&#9776; Menu</button>
+            <ul class="navigation">
+                <li><a href="University.html">University</a></li>
+                <li id="active"><a href="Academics.html">Academics</a></li>
+                <li><a href="Athletics.html">Athletics</a></li>
+                <li><a href="Arts.html">Arts</a></li>
+            </ul>
+        </nav>
+        
+        <main class="wrapper">
+            <section class="main-head">
+                <h2 class="hero-title">Academic Rescources</h2>
+                <div class="heroContainer">
+                    <picture>
+                        <source media="(max-width: 360px)" srcset="./images/University_Academic_Books_Small.jpg">
+                        <source media="(max-width: 900px)" srcset="./images/University_Academic_Books_Medium.jpg">
+                        <img id="heroImg" src="./images/University_Academic_Books_Large.jpg" alt=" University bookshelf on campus library | Photo by Iñaki del Olmo on Unsplash">
+                    </picture>
+                </div>
+            </section>
+            <aside class="side">
+                <h3 class="side-title">Site Rescources:</h3>
+                <ul>
+                    <li><a href="">Course Catalogue</a></li>
+                    <li><a href="">Fall Registration Calender</a></li>
+                    <li><a href="#contact-University">Contact Us</a></li>
+                </ul>
+            </aside>
+            <article class="content">
+                
+                <h2>TU Academics </h2>
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti 
+                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique 
+                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis 
+                    est et expedita distinctio.</p><br>
+                    <picture>
+                        <source media="(max-width: 360px)" srcset="./images/University_Academic_Library_Small.jpg">
+                        <source media="(max-width: 900px)" srcset="./images/University_Academic_Library_Medium.jpg">
+                        <img id="heroImg2" src="./images/University_Academic_Library_Large.jpg" alt="University Academic campus library | Photo by Robert Bye on Unsplash">
+                    </picture>
+                <h3>Grammar, Logic, and Rhetoric</h3>
+                <p> 
+                    Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus 
+                    id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem 
+                    quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae 
+                    non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur 
+                    aut perferendis doloribus asperiores repellat.</p>   
+                    
+            </article> 
+
+            <footer class="main-footer">
+                <ul>
+                    
+                    <li>Dean - Dallas Eaton</li>
+                    <li id="contact-University">Contact Us:
+                        <li>Admissions:</li>
+                        <li>Phone: (555)-555-5555</li>
+                        <li>Email: TriviumSchool1@TU.edu</li>
+                        <li>Administration:</li>
+                        <li>Phone: (111)-111-1111</li>
+                        <li>Email: TriviumSchool2@TU.edu</li>
+                    </li> 
+                    <li>© 2020 TriviumUniversity.edu</li>
+                </ul> 
+                <a class="foot-nav" href="../index.html">Assignments</a> 
+                <br>
+                <span id="todaysDate"></span>
+                <script src="js/currentDate.js"></script>
+            </footer>
+        </main>
+
+        <script src="js/responsiveMenu.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>WebFont.load({google: {families: ['Raleway: 400,600,800', 'Lora:ital,wght@0,400;0,700;1,400']}});</script>
+
+    </body>
+</html>

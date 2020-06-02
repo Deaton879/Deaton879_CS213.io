@@ -1,0 +1,86 @@
+@media only screen and (min-width: 30em) {
+
+    .nav-container {
+        margin-left: auto;
+    }
+
+    .navigation li:hover {
+        background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 35%,rgba(12,118,146,1) 98%,rgba(125,185,232,1) 100%); 
+    }
+    
+    .logo {
+        padding: 2vh;
+        vertical-align: middle;
+        float: none;
+    }
+
+    #heroImg {
+        max-width: 100%;
+        border-radius: 0 0 0 10px;
+    }
+
+    .school-motto {
+        position: initial;
+        left: 0;
+        width: initial;
+    }
+
+    .wrapper {
+
+        grid-template-columns: 1fr 3fr;
+        grid-column-gap: 5px;
+        grid-template-areas: 
+            "header header"
+            "sidebar content"
+            "sidebar content"
+            "footer footer";
+    }
+
+    #hero-image2 {
+        float: left;
+        width: 75%;
+    }
+
+    .hero-title {
+        border-radius: 10px 0 0 0;
+    }
+
+    #article-pic {
+        float: left;
+        margin-right: 15px;
+    }
+
+    #article-pic2 {
+        float: right;
+        margin-left: 15px;
+        max-width: 60%;
+        height: auto;
+    }
+
+
+    .content p{
+        font-family: 'Raleway', sans-serif;
+        text-indent: 2rem;
+        padding: 0 2rem 0 2rem;
+    }
+
+    .side {
+        border-right: 3px groove rgba(25,37,53,1);
+        border-top: 2px groove rgba(25,37,53,1);        
+        border-radius: 0 5px 10px 0;
+     }
+
+     .reg-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+     .side-title {
+        max-width: 80%;
+    }
+
+    .side ul {
+        max-width: 70%;
+    }
+    
+}

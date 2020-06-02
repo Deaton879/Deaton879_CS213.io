@@ -1,0 +1,274 @@
+body {
+    background-color: rgba(25,37,53,.5);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(29,37,50);
+    padding: 10px;
+    color: rgb(201,174,121);
+    font-family: 'Lora', serif;
+    border: 1px groove navajowhite;
+}
+
+main {
+    max-width: inherit;
+    margin: auto;
+    height: max-content;
+    background-color: #f8f9fb;
+}
+
+
+
+.logo {
+    float: left;
+    padding: 10vw 0 0 0;
+}
+
+.h-title {
+    font-size: xxx-large;
+    color: white;
+    text-shadow: 2px 2px 1px #b6873b;
+    margin-bottom: 0;
+}
+.main-title {
+
+}
+
+.school-motto {
+    color: #bb9a65;
+    text-shadow: 1px 1px 0px black;
+    position: relative;
+    left: -50px;
+    width: max-content;
+    font-weight: 600;
+}
+
+
+.navigation {
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    height: auto;
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+.navigation li {
+    display: none; 
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(25,37,53,1) 98%); 
+    text-shadow: 1px 1px 4px black;
+    font-size: large;
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,192535+98 */
+}
+
+.responsive li {
+    display: block;
+    border-bottom: 1px solid white;
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 35%,rgba(12,118,146,1) 98%,rgba(125,185,232,1) 100%);
+}
+
+#menu {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(25,37,53,1) 98%); 
+    color: azure;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+    padding: 13px 0;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    padding-left: 10px;
+}
+
+.responsive li:first-child {
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 35%,rgba(12,118,146,1) 98%,rgba(125,185,232,1) 100%); 
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+35,0c7692+98,7db9e8+100 */
+}
+
+.responsive li:first-child a {
+    color: #f8f9fb;
+}
+#article-pic {
+    border: 2px groove rgba(25,37,53,1);
+    border-radius: 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    text-align: center;
+    padding: 1em;
+    font-variant: small-caps;
+    color: azure;
+    font-weight: 600;
+	display: block;
+}
+
+#active {
+    background: #b6873b;
+    color: #f8f9fb;
+}
+
+#active a {
+    color: #f8f9fb;
+    font-size: larger;
+}
+
+#active:hover {
+    background-color: #bb9a65;
+}
+
+#heroImg {
+    width: 100%;
+    height: 100%;
+}
+#heroImg2 {
+    border-radius: 5px;
+    border: 2px groove rgba(25,37,53,1);
+    width: 100%;
+}
+
+.heroContainer {
+    max-width: inherit;
+    height: auto;
+}
+
+.foot-nav {
+    text-decoration: none;
+    color: #bb9a65;
+    font-weight: 700;
+    text-shadow: 0 0 2px #bb9a65;
+    padding-left: 10px;
+}
+
+.foot-nav:hover {
+    color: #f8f9fb;  
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    background-color: rgba(25,37,53,1);
+    color: #f8f9fb;
+    font-family: 'Raleway', sans-serif;
+    border-top: 2px solid #f8f9fb;
+    margin: auto;
+    font-size: small;
+    font-weight: 700;
+    border: 1px groove navajowhite;
+    line-height: 1.75;
+    align-items: left;
+    justify-content: center;
+}
+
+footer ul, footer a {
+    list-style: none;
+    text-decoration: none;
+    padding-left: 0;
+}
+/* <<<<<<<<<<<<<<<<<<< ACADEMICS PAGE GRID LAYOUT >>>>>>>>>>>>>>>>>>>>>>>>> */
+.main-head {
+   grid-area: header;
+}
+
+.content {
+   font-family: 'Lora', serif;
+   grid-area: content;
+   font-size: large;
+   padding: 2rem;
+   background-color: rgba(25,37,53,.3);
+   border-radius: 10px 0 0 0;
+}
+
+.content p{
+    font-family: 'Raleway', sans-serif;
+    text-indent: 2rem;
+
+}
+.content h2, .content h3 {
+    background-color: #bb9a65;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px 2px 2px 10px;
+    color: #f8f9fb;
+}
+
+.side {
+   grid-area: sidebar;
+   font-family: 'Lora', serif;
+   background: #f8f9fb; 
+   display: flex;
+   flex-direction: column;
+   background-color: rgba(25,37,53,.8);
+   margin-top: 1vh;
+}
+
+.side-title {
+    font-family: 'Raleway', sans-serif;
+    padding: 1rem;
+    margin-bottom:0;
+    max-height: fit-content;
+    background-color: #b6873b;
+    border-radius: 0 5px 5px 0;
+    border: 3px groove rgba(25,37,53,1);
+    color: white;
+    text-shadow: -1px 0px 4px rgba(25,37,53,1);
+}
+.side ul {
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    border: 3px groove rgba(25,37,53,1);
+    background-color: #f8f9fb;
+    list-style: none;
+} 
+
+.side a {
+    color: rgba(25,37,53,1);
+    text-decoration: none;
+    font-size: large;
+    font-weight: 700;
+    font-variant: small-caps;
+    text-shadow: 0px 0px 4px #f8f9fb; 
+}
+
+
+
+.side li:hover {
+   background-color: #b6873b;     
+}
+
+.main-footer {
+   grid-area: footer;
+   margin: 0;
+}
+
+.wrapper {
+  line-height: 1.5;
+  display: grid;
+  grid-row-gap: 0;
+  grid-template-areas: 
+    "header"
+    "content"
+    "sidebar"
+    "footer";
+}
+
+.hero-title {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    font-size: xx-large;
+    background: rgba(29,37,50, 1);
+    border-bottom: 1px solid white;        
+    margin: 1vh 0 0 auto;
+    padding: 10px;
+    text-align: center;
+}
