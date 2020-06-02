@@ -32,9 +32,7 @@ main {
     text-shadow: 2px 2px 1px #b6873b;
     margin-bottom: 0;
 }
-.main-title {
 
-}
 
 .school-motto {
     color: #bb9a65;
@@ -222,7 +220,7 @@ footer ul, footer a {
 }
 .side ul {
     line-height: 4rem;
-    text-align: center;
+    text-align: left;
     border-radius: 0 5px 5px 0;
     border: 3px groove rgba(25,37,53,1);
     background-color: #f8f9fb;
