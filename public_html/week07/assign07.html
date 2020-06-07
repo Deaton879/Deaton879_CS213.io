@@ -5,17 +5,81 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dallas Eaton's Week 07 Assignment</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./css/assign07main.css">
     </head>
     <body>
-        <header>
-            <!--Header Content Here-->
-            <h1 class="title_heading">This will be assignment #7</h1>
-        </header>
-        <main>
-            <!--Main Content Here-->
-            <p class="main_p"></p>
-        </main>      
-        <footer>
-        </footer>
+
+        <div id="mortgage-calculator">
+            <form method="post">
+                <div id="form-heading">
+                    <h1>Mortgage Calculator</h1>
+                    <p><i>Required fields are followed by </i><strong><abbr title="required"> * </abbr></strong>.</p>
+                </div>
+                <!--APR query | Must allow floating point values between 0 and 25.00 % .-->
+                <div class="form-wrapper">
+                    <label class="text">
+                    <span>APR-Annual Percentage Rate</span>
+                    <span class="input-wrapper">
+                        <input type="text" name="apr" id="apr" onblur="checkApr()" onkeydown="this.style.background = 'rgba(0,0,0,0.16)'"/>% *
+                        <span class="error-message" id="apr-error">*Percentage greater than 0 and less than (or equal to) 25.00% required</span> 
+                    </span>
+                    </label>
+                </div>
+
+                <div class="form-wrapper">
+                    <label class="text">
+                    <span>Loan Term (in Years)</span>
+                    <span class="input-wrapper">
+                        <input type="text" name="term" id="term" onblur="checkTerm()" onkeydown="this.style.background = 'rgba(0,0,0,0.16)'"/>years *
+                        <span class="error-message" id="term-error">*Number between 1 and 40 required</span>
+                    </span>
+                    </label>
+                </div>
+
+                <div class="form-wrapper">
+                    <label class="text">
+                    <span>Loan Amount (in Dollars)</span>
+                    <span class="input-wrapper">
+                        $<input type="text" name="amount" id="amount" onblur="checkLoan()" onkeydown="this.style.background = 'rgba(0,0,0,0.16)'"/> *
+                        <span class="error-message" id="loan-error">*Loan balance required</span>
+                    </span>
+                    </label>
+                </div>
+
+                <div class="form-wrapper">
+                    <label class="text">
+                        <span>Calculated Monthly Payment: </span>
+                        <span id="payment"></span>
+                    </label>
+                </div>
+
+                
+                <div class="form-wrapper">
+                    <label class="text">
+                        <span id="submit-error">Please correct errors before proceeding</span>
+                    </label>
+                </div>
+
+                
+                <div class="form-buttons">
+                <p> <button name="clearForm" id="clear" type="reset" onclick="document.getElementById('payment').style.display = 'none'" >Reset</button> </p>
+                <p> <button name="calculate" id="calculate" type="button" onclick="checkSubmit()">Calculate Payment</button> </p>
+                </div>
+            </form>
+            <div class="clear"></div>
+        </div>
+
+        <script src="./js/mortgageCalc.js"></script>
+        <script>
+
+            function calculate(P, I, N) {
+                document.getElementById('payment').style.display = 'block';
+                let M = I * (P) / 1 - (1 + I)**(-N);
+                return M.toFixed(2);
+            }
+        </script>
+        <script>
+            
+        </script> 
     </body>
 </html>
