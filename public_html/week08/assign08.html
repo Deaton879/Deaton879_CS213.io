@@ -19,28 +19,32 @@
 
             <!--                          Form                                   -->
 
-            <form method="post" id="checkout-form">
+            <form action="./thankyou.html" method="get" id="checkout-form" onreset="resetMyForm()">
                 <div id="form-content-container">
                     <fieldset id="contact-info">
                         <legend>contact info</legend>
                         <div class="formFieldContainer">
                             <label class="contactInfoLabel">first name *<br>
-                            <input type="text" name="first-name" placeholder="john" pattern="[A-za-z]{1,}" onload="imListening(this)" required></label>
+                            <input type="text" name="first-name" placeholder="john" pattern="[A-za-z]{1,}" id="first-NAME" onblur="imListening(this)" autofocus required></label>
                             <br><span class="errorMessage" id="first-name">*Please enter name using only alpha numeric characters</span>
                             <br>
                         
                             <label class="contactInfoLabel">last name *<br>
-                            <input type="text" name="last-name" placeholder="smith" pattern="[A-za-z]{1,}" onload="imListening(this)" required></label>
+                            <input type="text" name="last-name" placeholder="smith" pattern="[A-za-z]{1,}" onblur="imListening(this)" required></label>
                             <br><span class="errorMessage" id="last-name">*Please enter name using only alpha numeric characters</span>
                             <br>
                             
                             <label class="contactInfoLabel">address *<br>
-                            <textarea name="address" onload="imListening(this)" placeholder="street address, city, state, zip" required>                            </textarea></label>
+                            <textarea name="address" onload="imListening(this)" placeholder="street address, city, state, zip" onblur="imListening(this)" required></textarea></label>
                             <br><span class="errorMessage" id="address">*Address required to proceed</span><br>
 
                             <label class="contactInfoLabel">phone number *<br>
-                            <input type="text"name="phone" placeholder="format: xxx-xxx-xxxx" pattern="\d{3}[-]\d{3}[-]\d{4}" onload="imListening(this)" required></label>
+                            <input type="text" name="phone" placeholder="format: xxx-xxx-xxxx" pattern="\d{3}[-]\d{3}[-]\d{4}" onblur="imListening(this)" required></label>
                             <br><span class="errorMessage" id="phone">Please enter in correct format: "xxx-xxx-xxxx"</span>
+                            <br>
+
+                            <label class="contactInfoLabel">E-Mail:<br>
+                            <input type="email" name="Email" placeholder="john_doe@myemail.com"> (Optional)</label>
                             <br>
                         </div>
                     </fieldset>
@@ -48,86 +52,88 @@
                     <fieldset id="for-sale">
                         <legend>purchase</legend>
                         <div class="formFieldContainer">
-                            <form>
-                                <div class="forSaleItem" id="fs-1">
-                                    <span class="itemPicContainer"><img class="itemPic" src="./images/cart_item.png" alt="iphone. description: ...."></span>
+                            <div class="forSaleItem" id="fs-1">
+                                <span class="itemPicContainer"><img class="itemPic" src="./images/cart_item.png" alt="iphone. description: ...."></span>
 
-                                    <span class="itemTitle">iphone 6</span><br>
+                                <span class="itemTitle">iphone 6</span><br>
 
-                                    <span>$<output class="addSum" id="quantity1">0.00</output></span>
+                                <span>$<output class="addSum" id="quantity1">0.00</output></span>
 
-                                    <label>Qty:
-                                    <select name="quantity1" id="how-many-1" onchange="updatePrice(this)">
-                                        <option value="0.00">0</option>
-                                        <option value="80.00">1</option>
-                                        <option value="160.00">2</option>
-                                        <option value="240.00">3</option>
-                                        <option value="320.00">4</option>
-                                    </select></label>
-                                </div><br>
+                                <label>Qty:
+                                <select name="quantity1" id="how-many-1" onchange="updatePrice(this)">
+                                    <option value="0.00">0</option>
+                                    <option value="80.00">1</option>
+                                    <option value="160.00">2</option>
+                                    <option value="240.00">3</option>
+                                    <option value="320.00">4</option>
+                                </select></label>
+                            </div><br>
 
-                                <div class="forSaleItem" id="fs-2">
-                                    <span class="itemPicContainer"><img class="itemPic" src="./images/cart_item.png" alt="iphone. description: ...."></span>
+                            <div class="forSaleItem" id="fs-2">
+                                <span class="itemPicContainer"><img class="itemPic" src="./images/cart_item.png" alt="iphone. description: ...."></span>
 
-                                    <span class="itemTitle">iphone 6s</span><br>
+                                <span class="itemTitle">iphone 6s</span><br>
 
-                                    <span>$<output class="addSum" id="quantity2">0.00</output></span>
+                                <span>$<output class="addSum" id="quantity2">0.00</output></span>
 
-                                    <label>Qty:
-                                    <select name="quantity2" id="how-many-2" onchange="updatePrice(this)">
-                                        <option value="0.00">0</option>
-                                        <option value="100.00">1</option>
-                                        <option value="200.00">2</option>
-                                        <option value="300.00">3</option>
-                                        <option value="400.00">4</option>
-                                    </select></label>
-                                </div><br>
+                                <label>Qty:
+                                <select name="quantity2" id="how-many-2" onchange="updatePrice(this)">
+                                    <option value="0.00">0</option>
+                                    <option value="100.00">1</option>
+                                    <option value="200.00">2</option>
+                                    <option value="300.00">3</option>
+                                    <option value="400.00">4</option>
+                                </select></label>
+                            </div><br>
 
-                                <div class="forSaleItem" id="fs-3">
-                                    <span class="itemPicContainer"><img class="itemPic" src="./images/cart_item.png" alt="iphone. description: ...."></span>
+                            <div class="forSaleItem" id="fs-3">
+                                <span class="itemPicContainer"><img class="itemPic" src="./images/cart_item.png" alt="iphone. description: ...."></span>
 
-                                    <span class="itemTitle">iphone 7</span><br>
+                                <span class="itemTitle">iphone 7</span><br>
 
-                                    <span>$<output class="addSum" id="quantity3">0.00</output></span>
+                                <span>$<output class="addSum" id="quantity3">0.00</output></span>
 
-                                    <label>Qty:
-                                    <select name="quantity3" id="how-many-3" onchange="updatePrice(this)">
-                                        <option value="0.00">0</option>
-                                        <option value="120.00">1</option>
-                                        <option value="240.00">2</option>
-                                        <option value="360.00">3</option>
-                                        <option value="480.00">4</option>
-                                    </select></label>
-                                </div><br>
+                                <label>Qty:
+                                <select name="quantity3" id="how-many-3" oninput="updatePrice(this)">
+                                    <option value="0.00">0</option>
+                                    <option value="120.00">1</option>
+                                    <option value="240.00">2</option>
+                                    <option value="360.00">3</option>
+                                    <option value="480.00">4</option>
+                                </select></label>
+                            </div><br>
 
-                                <div class="forSaleItem" id="fs-4">
-                                    <span class="itemPicContainer"><img class="itemPic" src="./images/cart_item.png" alt="iphone. description: ...."></span>
-                                    <span class="itemTitle">iphone 7s</span><br>
+                            <div class="forSaleItem" id="fs-4">
+                                <span class="itemPicContainer"><img class="itemPic" src="./images/cart_item.png" alt="iphone. description: ...."></span>
+                                <span class="itemTitle">iphone 7s</span><br>
 
-                                    <span>$<output class="addSum" value="" id="quantity4">0.00</output></span>
+                                <span>$<output class="addSum" id="quantity4">0.00</output></span>
 
-                                    <label>Qty:
-                                    <select name="quantity4" id="how-many-4" onchange="updatePrice(this)">
-                                        <option value="0.00">0</option>
-                                        <option value="150.00">1</option>
-                                        <option value="300.00">2</option>
-                                        <option value="450.00">3</option>
-                                        <option value="600.00">4</option>
-                                    </select></label>
-                                </div><br>
-                            
-                                <label> total: $<output name="total" id="total"></output></label>
-                            </form>
+                                <label>Qty:
+                                <select name="quantity4" id="how-many-4" oninput="updatePrice(this)">
+                                    <option value="0.00">0</option>
+                                    <option value="150.00">1</option>
+                                    <option value="300.00">2</option>
+                                    <option value="450.00">3</option>
+                                    <option value="600.00">4</option>
+                                </select></label>
+                            </div><br>
+                        
+                            <label> total: $<output name="total" id="total" ></output>0</label>
+
                                
                         </div>
                     </fieldset>
 
                     <fieldset id="confirm-purchase">
-                        <label name="cc">card # <input type="text" placeholder="xxxx xxxx xxxx xxxx" name="credit_card" pattern="\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}" required></label> 
-                        <label name="">exp date<input name="exp_date" id="exp_date" placeholder="01/2001" pattern="\d{2}\/\d{4}" required></label>
+                        <legend>payment information</legend>
+                        <label>card # <input type="text" placeholder="xxxx xxxx xxxx xxxx" name="credit_card" pattern="\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}" onblur="imListening(this)" required></label>
+                        <span class="errorMessage" id="credit_card">* invalid card number. Use 1 space between each number block(format: 0000 0000 0000 0000)</span> 
+                        <label>exp date <input type="text" placeholder="mm/yyyy" name="exp-date" pattern="^((0[1-9])|(1[0-2]))\/((20[2-9][0-9])|(21\d{2,})|([3-9]\d{3,}))$" onblur="imListening(this)" required> (mm/yyyy)</label>
+                        <span class="errorMessage" id="exp-date">* invalid entry. Please enter a valid date in the correct format:(mm/yyyy)</span>
                         
-                        <div id="pick-a-card">
-                            <div id="pick-a-card-heading"></div>
+                        <span id="pick-a-card">
+                            <span id="pick-a-card-heading"></span>
                             <label><input type="radio" name="card" value="AMEX">
                             <img class="creditCard" src="./images/amex.png" alt="american express card"></label>
                         
@@ -139,10 +145,13 @@
 
                             <label><input type="radio" name="card" value="Visa">
                             <img class="creditCard" src="./images/visa.png" alt="visa card"></label>
-                        </div>
-                        <legend>payment information</legend>
-                        <span id="submission-error">Please correct errors before proceeding</span><br>
-                        <input type="submit" value="checkout" id="submit"> 
+                        </span>
+                        
+                        <span class="errorMessage" id="submit">Please correct errors before proceeding</span><br>
+                        <span id="form-buttons">
+                            <input type="reset" name="reset" id="reset">
+                            <input type="submit" name="submit" id="submitForm"> 
+                        </span>
                     </fieldset>
                 </div>
             </form> 

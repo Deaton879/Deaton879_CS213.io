@@ -5,17 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dallas Eaton's Week 09 Assignment</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./css/assign09.css">
     </head>
     <body>
         <header>
             <!--Header Content Here-->
-            <h1 class="title_heading">This will be assignment #9</h1>
+            <h1 class="title_heading">AJAX and JSON</h1>
         </header>
         <main>
+
+            
             <!--Main Content Here-->
-            <p class="main_p"></p>
+            <div id="pickCountry">
+                <input type="button" name="MEXICO" id="Mexico" value="Mexico" onclick="getCities('./txt/mexico.txt'), displayCountry(this.name)">
+                <input type="button" name="CANADA" id="Canada" value="Canada" onclick="getCities('./txt/canada.txt'), displayCountry(this.name)">
+                <input type="button" name="RUSSIA" id="Russia" value="Russia" onclick="getCities('./txt/russia.txt'), displayCountry(this.name)">
+                <input type="button" name="UNITED STATES" id="USA" value="United States" onclick="getCities('./txt/usa.txt'), displayCountry(this.name)">
+            </div>
+            <h2 id="country">Pick a Country</h2>
+            <h3>Population: Top 10 Cities</h3>
+            <div id="cities"></div><br>
+
+            <label id="getJSON">Enter URL/filename: 
+            <input type="text" name="getJSON" value="json.txt"></label>
+            <input type="button" name="submitJSON" value="Enter" onclick="parseJSON()">
+            
+
+
         </main>      
         <footer>
         </footer>
+        <script src="./js/ajaxJavaScript.js"></script>
     </body>
+
 </html>

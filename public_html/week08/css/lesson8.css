@@ -47,13 +47,19 @@ fieldset{
     background-color: #f8f9fb;
 }
 
+fieldset.formFieldContainer {
+    margin: inherit;
+}
+
+
+
 legend{
     font-size: 2em;
     font-variant: small-caps;
     padding: 0 1vh 1vh 3vh;
     border-radius: 15px;
     color: #f8f9fb;
-    border: 1px solid black;
+    border: 1px solid #f8f9fb;
     text-shadow: 0px 0px 1px black;
     text-indent: -20px;
     background-color: #0f0e0e;
@@ -61,6 +67,7 @@ legend{
 
 .errorMessage {
     display: none;
+    color: red;  
 }
 
 textarea {
@@ -102,10 +109,6 @@ div.forSaleItem label {
     margin: auto;
 }
 
-.itemPic {
-
-}
-
 .itemTitle {
     font-size: 1.5rem;
 }
@@ -128,20 +131,20 @@ input {
     border-radius: 6px;
     text-indent: 5px;
     font-variant: small-caps;
+    padding: 10px;
 }
 
 .creditCard {
     max-width: 50px;
 }
 
-div#pick-a-card {
+span#pick-a-card {
     display: flex;
     flex-direction: row;
+    max-width: fit-content;
+    margin-right: 0;
 }
 
-#submission-error {
-    display:none;
-}
 
 form input:required {
     border-left: 10px groove red;
@@ -151,13 +154,32 @@ form input:required:valid {
     border-left: 10px groove greenyellow;
 }
 
+span#form-buttons {
+    text-align: right;
+}
+
+input#submitForm, input#reset {
+    border-radius: 6px;
+    color: #f8f9fb;
+    background-color: rgba(25,37,53,1);
+    padding: 15px;
+}
+
+/*              Medium Screen Size                 */
 
 @media only screen and (min-width: 30rem) {
     textarea {
         width: 60%;
     }
+
+    fieldset#confirm-purchase {
+        display: inline-flex;
+        margin: 0% 15% 2% 22%;
+    }
 }
 
+
+/*              Large Screen Size                   */
 @media only screen and (min-width: 60rem) {
     div.forSaleItem {
         max-width: 75%;
@@ -166,6 +188,10 @@ form input:required:valid {
 
     .itemTitle {
         text-align: right;
+    }
+
+    input {
+        padding: 2px;
     }
 
 }
