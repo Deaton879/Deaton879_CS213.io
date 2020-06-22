@@ -10,30 +10,36 @@
     <body>
         <header>
             <!--Header Content Here-->
-            <h1 class="title_heading">AJAX and JSON</h1>
-        </header>
+            <h1 class="title_heading">AJAX and JSON: Week 09 Assignment</h1>
+        </header><br>
         <main>
 
             
             <!--Main Content Here-->
-            <div id="pickCountry">
+            <h2 id="country">Pick a Country</h2>
+            <section id="pickCountry">
                 <input type="button" name="MEXICO" id="Mexico" value="Mexico" onclick="getCities('./txt/mexico.txt'), displayCountry(this.name)">
                 <input type="button" name="CANADA" id="Canada" value="Canada" onclick="getCities('./txt/canada.txt'), displayCountry(this.name)">
                 <input type="button" name="RUSSIA" id="Russia" value="Russia" onclick="getCities('./txt/russia.txt'), displayCountry(this.name)">
                 <input type="button" name="UNITED STATES" id="USA" value="United States" onclick="getCities('./txt/usa.txt'), displayCountry(this.name)">
-            </div>
-            <h2 id="country">Pick a Country</h2>
-            <h3>Population: Top 10 Cities</h3>
-            <div id="cities"></div><br>
+            </section>
+            
+            <h3>Population: Top 10 Cities</h3><br>
+            <div id="cities"></div><hr>
 
-            <label id="getJSON">Enter URL/filename: 
-            <input type="text" name="getJSON" value="json.txt"></label>
-            <input type="button" name="submitJSON" value="Enter" onclick="parseJSON()">
+            <h2>Students</h2>
+            <div id="stu-input">
+            <label id="getJSON">Enter URL/filename:<br> 
+            <input type="text" name="getJSON" value="json.txt" id="askJson"></label>
+            <input type="button" name="submitJSON" value="Enter" onclick="parseJSON(document.getElementById('askJson')), document.getElementById('students').innerHTML = null"></div>
+            <span id="error">Error: The file you are trying to reach does not exist!</span><br><br>
+            <section id="students"></section><br><hr>
             
 
 
         </main>      
         <footer>
+            Dallas Eaton | BYU-Idaho | CS 213 | Week 09 Assignment
         </footer>
         <script src="./js/ajaxJavaScript.js"></script>
     </body>
