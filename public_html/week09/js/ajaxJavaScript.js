@@ -83,27 +83,27 @@ async function parseJSON(x) {
     else if(response.ok) {
         let jsonObject = await response.json();
         console.table(jsonObject);  // temporary checking for valid response and data parsing
-            const students = jsonObject['students'];
-            
-            for (let i = 0; i < students.length; i++) {
-                let kid = document.createElement('section');
+        const students = jsonObject['students'];
+        
+        for (let i = 0; i < students.length; i++) {
+            let kid = document.createElement('section');
 
-                let h3 = document.createElement('h3');
-                let p1 = document.createElement('p');
-                let p2 = document.createElement('p');
-                let p3 = document.createElement('p');
+            let h3 = document.createElement('h3');
+            let p1 = document.createElement('p');
+            let p2 = document.createElement('p');
+            let p3 = document.createElement('p');
 
-                h3.textContent = students[i].first + ' ' + students[i].last;
-                p1.textContent = students[i].address.city + ', ' + students[i].address.state + '\n' + students[i].address.zip;
-                p2.textContent = "GPA: " + students[i].gpa;
-                p3.textContent = "Major: " + students[i].major;
-                kid.appendChild(h3);
-                kid.appendChild(p1);
-                kid.appendChild(p2);
-                kid.appendChild(p3);
+            h3.textContent = students[i].first + ' ' + students[i].last;
+            p1.textContent = students[i].address.city + ', ' + students[i].address.state + '\n' + students[i].address.zip;
+            p2.textContent = "GPA: " + students[i].gpa;
+            p3.textContent = "Major: " + students[i].major;
+            kid.appendChild(h3);
+            kid.appendChild(p1);
+            kid.appendChild(p2);
+            kid.appendChild(p3);
 
-                document.querySelector('section#students').appendChild(kid);
-            }
+            document.querySelector('section#students').appendChild(kid);
+        }
     }
 
 
