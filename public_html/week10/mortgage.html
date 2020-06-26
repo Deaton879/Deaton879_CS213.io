@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mortgage.html</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./css/assign10main.css">
+    </head>
+    <body>
+
+        <div id="mortgage-calculator">
+            <form action="mortgage.php" method="GET">
+                <div id="form-heading">
+                    <h1>Mortgage Calculator</h1>
+                    <p><i>Required fields are followed by </i><strong><abbr title="required"> * </abbr></strong>.</p>
+                </div>
+                <!--APR query | Must allow floating point values between 0 and 25.00 % .-->
+                <div class="form-wrapper">
+                    <label class="text">*APR-Annual Percentage Rate<br><br>
+                    <span class="input-wrapper">
+                        <input type="text" name="apr" id="apr" onblur="checkApr()" onkeydown="this.style.background = 'rgba(0,0,0,0.16)'"/> 
+                        <br><span class="error-message" id="apr-error">*Percentage greater than 0 and less than (or equal to) 25.00% required</span> 
+                    </span>
+                    </label>
+                </div>
+
+                <div class="form-wrapper">
+                    <label class="text">*Loan Term (in Years)<br><br>
+                    <span class="input-wrapper">
+                        <input type="text" name="term" id="term" onblur="checkTerm()" onkeydown="this.style.background = 'rgba(0,0,0,0.16)'"/>
+                        <br><span class="error-message" id="term-error">*Number between 1 and 40 required</span>
+                    </span>
+                    </label>
+                </div>
+
+                <div class="form-wrapper">
+                    <label class="text">*Loan Amount (in Dollars)<br><br>   
+                    <span class="input-wrapper">
+                        <input type="text" name="amount" id="amount" onblur="checkLoan()" onkeydown="this.style.background = 'rgba(0,0,0,0.16)'"/>
+                        <br><span class="error-message" id="loan-error">*Loan balance required</span>
+                    </span>
+                    </label>
+                </div>
+
+                <div class="form-wrapper">
+                    <label class="text">Calculated Monthly Payment:<br>
+                        <span id="payment"></span>
+                    </label>
+                </div>
+
+                
+                <div class="form-wrapper">
+                    <label class="text">
+                        <span id="submit-error">Please correct errors before proceeding</span>
+                    </label>
+                </div>
+
+                
+                <div class="form-buttons">
+                <span>
+                    <button name="clearForm" id="clear" type="reset" onclick="document.getElementById('payment').style.display = 'none'" >Reset</button>
+                    <button name="calculate" id="calculate" type="submit" disabled>Calculate Payment</button>
+                </span>
+                </div>
+            </form>
+            <div class="clear"></div>
+        </div>
+
+        <script src="./js/mortgageCalc.js"></script>
+        
+    </body>
+</html>

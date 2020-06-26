@@ -1,0 +1,112 @@
+.clear {height:0px; clear:both;}
+
+html {
+    background:#373431;
+}
+
+.form-wrapper {
+    background:#373431;
+    font-family:'PT Sans', Arial, sans-serif;
+    font-weight:normal;
+    font-size:1em;
+    line-height:1em;
+    color:#A8A7A8;
+    padding:1em 0;
+  }
+
+.form-buttons {
+    background:#373431;
+    font-family:'PT Sans', Arial, sans-serif;
+    font-weight:normal;
+    font-size:1em;
+    line-height:1em;
+    color:#A8A7A8;
+    padding:1em 0;
+    display: flex;
+  }
+
+label.text input, label.text textarea {
+    background:rgba(0,0,0,0.16);
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3) inset, 0 1px rgba(255, 255, 255, 0.06);
+    border: 0 none;
+    border-radius: 3px;
+    color: #BBBBBB;
+    transition:background .2s;
+    height: 25px;
+}
+
+button[name=calculate], button[name=clearForm] {
+    margin-right:0.563em;
+    margin-top:2.50em;
+    font-size:1em;
+    border: 0 none;
+    background:rgba(0,0,0,0.2);
+    color: #BBBBBB;
+    border-radius: 3px;
+    padding: 0.563em 4em;
+    cursor:pointer;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.06);
+    transition:background 0.2s;
+}
+
+button[name=calculate]:disabled, button[name=calculate]:hover:disabled  {
+    color: #696767;
+    cursor: default;
+}
+
+.input-wrapper p {
+    padding: 2vw;
+}
+
+#amount {
+    align-self: start;
+}
+
+#form-heading {
+    text-align: center;
+    background:#373431;
+    font-family:'PT Sans', Arial, sans-serif;
+    font-weight:normal;
+    font-size:1em;
+    line-height:1em;
+    color:#A8A7A8;
+    padding:1em 0;
+}
+
+.error-message {
+    display: inline-block;
+    color: tomato;
+    font-style: italic;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+body {
+    max-width: fit-content;
+    margin:auto;
+    text-align: center;
+}
+
+#mortgage-calculator {
+    width:100%;
+    background:#FFFFFF;
+}
+
+#payment-calculated {
+    color: #BBBBBB;
+    font-size: large;
+    font-variant: small-caps;
+    text-align: left;
+}
+
+#apr-error, #term-error, #loan-error, #submit-error {
+    display: none;
+    color: tomato;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}

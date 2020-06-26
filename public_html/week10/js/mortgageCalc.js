@@ -1,7 +1,4 @@
 
-var P = 0.00; //principle / initial amount borrowed
-var I = 0.00; //monthly interest rate
-var N = 0; //
 
 let phase1 = false;
 let phase2 = false;
@@ -10,13 +7,21 @@ let complete = false;
 
 let checkPhases = [phase1, phase2, phase3];
 
+
+
+function validateForm() {
+    if(phase1 == true && phase2 == true && phase3 == true) {
+        checkSubmit();
+    }
+}
+
+
 function checkApr() {
     var Apr = document.getElementById("apr").value;
     var x = document.getElementById("apr-error");
 
     if(Apr > 0 && Apr <= 25.00) {
         x.style.display = "none";
-        I = Apr / 100;
         phase1 = true;
     }
     else {
@@ -24,14 +29,14 @@ function checkApr() {
         //x.innerHTML = "*Percentage greater than 0 and less than (or equal to) 25.00% required"
         phase1 = false;
     }
+    validateForm();
 }
 
 function checkTerm() {
     var Term = document.getElementById("term").value;
     var x = document.getElementById("term-error");
     if(Term > 0 && Term <= 40) {
-        x.style.display = "none";
-        N = 12 * Term;        
+        x.style.display = "none";      
         phase2 = true;
     }
     else {
@@ -39,6 +44,7 @@ function checkTerm() {
         //x.innerHTML = "*Number between 1 and 40 required"
         phase2 = false;
     }
+    validateForm();
 }
 
 function checkLoan() {
@@ -46,7 +52,6 @@ function checkLoan() {
     var x = document.getElementById("loan-error");
     if(LoanAmt > 0) {
         x.style.display = "none";
-        P = LoanAmt;
         phase3 = true;
     }
     else {
@@ -54,6 +59,7 @@ function checkLoan() {
         //x.innerHTML = "*Loan balance required"
         phase3 = false;
     }
+    validateForm();
 }
 
 
@@ -92,7 +98,8 @@ function checkSubmit() {
         
     }
     if(complete == true) {
-        pay.innerHTML = calculate(P, I, N);
+        console.log('yay');
+        document.getElementById('calculate').disabled = false;
     }
 
 }
