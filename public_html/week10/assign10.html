@@ -3,19 +3,180 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dallas Eaton's Week 10 Assignment</title>
+        <title>CWD PUBLIC_HTML</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <style>
+            body {
+                margin: auto;
+                padding: 30px;
+            }
+
+            div#container {
+                width: 100%;
+                margin: auto;
+                border: 1px solid black;
+            }
+
+            section.entry {
+                padding: 5px;
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                text-align: center;
+                margin: auto;
+            }
+
+            hr {
+                margin: auto;
+            }
+
+            section.entry:hover {
+                border-left: 3px dashed rgb(46, 46, 126);
+                border-right: 3px dashed rgb(46, 46, 126);
+                background-color: rgb(172, 255, 247);
+            }
+
+            section.entry p {
+                margin: auto;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 5px;
+            }
+
+            .bolder {
+                font-weight: bold;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 1em;
+                font-size: 1.1em;
+            }
+
+            span {
+                display: block;
+            }
+
+        </style>
+        
     </head>
-    <body>
-        <header>
-            <!--Header Content Here-->
-            <h1 class="title_heading">This will be assignment #10</h1>
-        </header>
-        <main>
-            <!--Main Content Here-->
-            <p class="main_p"></p>
-        </main>      
-        <footer>
-        </footer>
+
+    <body onload="getPHP()">
+
+
+
+        <div id="container"></div>
+        
+
+
+        <script>
+            function getPHP() {
+
+                console.log('function initiated onload!')
+                fetch('../assign10.php')
+                    .then((response) => response.json())
+                    .then((jsonObj) => {
+
+                        console.table(jsonObj);
+                        let cwd = jsonObj[0].cwd;
+
+                        let sec = document.createElement('section');
+                        sec.setAttribute('class', 'entry');
+                        sec.setAttribute('id', 'list-header');
+                        document.getElementById('container').appendChild(sec);
+                        
+                        
+                        let pb1 = document.createElement('p');
+                        let pb2 = document.createElement('p');
+                        let pb3 = document.createElement('p');
+                        let pb4 = document.createElement('p');
+                        pb1.setAttribute('class', 'bolder');
+                        pb2.setAttribute('class', 'bolder');
+                        pb3.setAttribute('class', 'bolder');
+                        pb4.setAttribute('class', 'bolder');
+                        pb1.textContent = 'Filename';
+                        pb2.textContent = 'Filetype';
+                        pb3.textContent = 'CWD';
+                        pb4.textContent = 'Action';
+                        document.getElementById('list-header').appendChild(pb1);
+                        document.getElementById('list-header').appendChild(pb2);
+                        document.getElementById('list-header').appendChild(pb3);
+                        document.getElementById('list-header').appendChild(pb4);
+                        
+                        
+
+                        for (let i = 0; i < jsonObj.length; i++) {
+                            
+                            if(jsonObj[i].fileName == "." || jsonObj[i].fileName == "..") {
+                                let kid = document.createElement('section');
+                                let p1 = document.createElement('p');
+                                let p2 = document.createElement('p');
+                                let hr = document.createElement('hr');
+
+                                p1.textContent = jsonObj[i].fileName;
+                                p2.textContent = jsonObj[i].fileType;
+                                kid.setAttribute('class', 'entry');
+
+                                kid.appendChild(p1);
+                                kid.appendChild(p2);
+                                document.getElementById('container').appendChild(hr);
+
+                                document.querySelector('div#container').appendChild(kid);
+                            }
+
+                            else if(jsonObj[i].fileType == 'file') {
+                                let kid = document.createElement('section');
+                                let p1 = document.createElement('p');
+                                let p2 = document.createElement('p');
+                                let p3 = document.createElement('p');
+                                let span = document.createElement('span');
+                                let a = document.createElement('a');
+                                let hr = document.createElement('hr');
+
+                                a.setAttribute('href', '../' + jsonObj[i].fileName);
+                                p1.textContent = jsonObj[i].fileName;
+                                p2.textContent = jsonObj[i].fileType;
+                                p3.textContent = jsonObj[i].cwd;
+                                a.textContent = "Click to Display";
+                                kid.setAttribute('class', 'entry');
+                                
+                                    
+                                kid.appendChild(p1);
+                                kid.appendChild(p2);
+                                kid.appendChild(p3);
+                                kid.appendChild(span);
+                                span.appendChild(a);
+                                document.getElementById('container').appendChild(hr);
+
+                                document.querySelector('div#container').appendChild(kid);
+                            }
+
+                            else if(jsonObj[i].fileType == 'dir') {
+                                let kid = document.createElement('section');
+                                let p1 = document.createElement('p');
+                                let p2 = document.createElement('p');
+                                let p3 = document.createElement('p');
+                                let hr = document.createElement('hr');
+
+                                p1.textContent = jsonObj[i].fileName;
+                                p2.textContent = jsonObj[i].fileType;
+                                p3.textContent = jsonObj[i].cwd;
+                                kid.setAttribute('class', 'entry');
+                                
+                                kid.appendChild(p1);
+                                kid.appendChild(p2);
+                                kid.appendChild(p3);
+                                document.getElementById('container').appendChild(hr);
+
+                                document.querySelector('div#container').appendChild(kid);
+                            }
+                            
+                           
+
+                            
+                        }
+
+                        
+                    })
+                    
+            }   
+
+        </script>
     </body>
+
 </html>
