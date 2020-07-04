@@ -1,0 +1,100 @@
+html {
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 35%,rgba(12,118,146,1) 98%,rgba(125,185,232,1) 100%);
+  height: 100%;
+}
+
+
+header {
+  background-color: #212121;
+  padding: 10px;
+}
+
+p {
+  color: #f8f9fb;
+  padding: 2px;
+}
+
+#title-heading {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: x-large;
+  font-variant: small-caps;
+  margin: auto;
+  padding: 1rem;
+  color: rgba(30,87,153,1)
+}
+
+#confirm-main {
+  max-width: 900px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 5px 5px;
+  margin: auto;
+  background-color: #3b3a3a;
+}
+
+#order-summary {
+  width: 60%;
+  background-color: #f8f9fb;
+  margin: auto;
+  padding: 5px 20px 10px 20px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#order-summary p {
+  margin: auto;
+  padding: 2px;
+  text-indent: 1rem;
+  font-family: 'Cantarell', sans-serif;
+}
+
+#purchases {
+  background-color: #f8f9fb;
+  border-radius: 5px;
+  margin: auto;
+  background-color: steelblue;
+  padding: 15px;
+}
+
+#purchases p {
+  padding: 10px;
+}
+
+form {
+  margin: auto;
+  padding: 10px;
+}
+
+h3 {
+  margin-bottom: 0px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#total {
+  text-align: right;
+}
+
+button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  padding: 9px;
+  background-color: rgb(221, 226, 231);
+}
+
+#message {
+  text-align: center;
+  color: #f8f9fb;
+  font-family: 'Raleway', sans-serif;
+  font-variant: all-small-caps;
+}
+
+.info {
+  background-color: steelblue;
+  border-radius: 5px;
+  padding: 15px;
+}
