@@ -3,19 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dallas Eaton's Week 12 Assignment</title>
+        <title>Mileage Calculator</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <style>
+            body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+            header{background: black; color: white; margin: 0px; padding: 10px;}
+            main {display: flex; flex-direction: column; width:60%; margin: auto; background: rgb(233, 231, 231); border: 5px solid black; border-top: 0px; border-radius: 0px 0px 10px 10px; padding-bottom: 15px;}
+            h1, h2, div#response {text-align: center;}
+            p {font-weight: 700; margin-bottom: 5px;}
+            input {text-align: left; border-width: 2px; font-weight: 600; width: 90%;}
+            div#query{margin: auto;}
+            button#send-request {padding: 5px; width: 100%; border: 1px ridge black;  margin-top: 15px; font-weight: 700;}
+            @media only screen and (min-width: 60rem) {
+                main{width: 40%;}
+                input{width: 100%;}
+            }
+        </style>
     </head>
     <body>
         <header>
             <!--Header Content Here-->
-            <h1 class="title_heading">This will be assignment #12</h1>
+            <h1>Mileage Calculator</h1>
         </header>
+
         <main>
-            <!--Main Content Here-->
-            <p class="main_p"></p>
+            <h2>Fill in all fields to calculate the distance</h2>
+            <div id="query">
+
+                <p>Start City:</p>
+                <input type="text" name="startCity" placeholder="e.g Austin" onfocus="this.style.textAlign = 'right', this.placeholder = ''" 
+                onblur="validate(this)" required>
+
+                <p>Start State:</p>
+                <input type="text" name="startState" placeholder="TX" onfocus="this.style.textAlign = 'right', this.placeholder = ''"
+                onblur="validate(this)" pattern="[a-z,A-Z]{2}" required>
+
+                <p>End City:</p>
+                <input type="text" name="endCity" placeholder="Detroit" onfocus="this.style.textAlign = 'right', this.placeholder = ''"
+                onblur="validate(this)" required>
+
+                <p>End State:</p>
+                <input type="text" name="endState" placeholder="Michigan" onfocus="this.style.textAlign = 'right', this.placeholder = ''"
+                onblur="validate(this)" pattern="[a-z,A-Z]{2}" required><br><br>
+
+                <button type="button" id="send-request" onclick="getMileage()" disabled>Calculate</button>
+            </div>
+            <hr>
+            <div id="response"><!-- Mileage calculation response data goes here--></div>
         </main>      
-        <footer>
-        </footer>
+
+        <script src="mileageCalc.js"></script>
     </body>
 </html>
